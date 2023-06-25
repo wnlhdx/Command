@@ -1,6 +1,7 @@
 import math
 import re
 
+print([2.5,2.2]**(1/2))
 print(2 ** 3)
 print(len(str(2 ** 3)))
 print(math.pi)

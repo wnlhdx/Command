@@ -12,7 +12,7 @@ endif()
 project ("demo1")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (demo1  "demo1.h"  "demo1.c")
+add_executable (demo1  "demo1.h"  "demo1.c" "a.c")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET demo1 PROPERTY CXX_STANDARD 20)
