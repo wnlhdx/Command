@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0tvraaorwjt4"]
+
+[node name="test2" type="Node2D"]
+scale = Vector2(2.02354, 1.39798)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2.41464, 2.74115)
+text = "test2"

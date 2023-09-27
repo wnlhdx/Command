@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1695078093 source:d:\work\code\command\github\c&c++\primerc\2\2.2.c
+	<stdio.h>
+	<stdlib.h>
+
+1695079044 source:d:\work\code\command\github\c&c++\primerc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
