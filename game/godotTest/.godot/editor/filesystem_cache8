@@ -1,6 +1,0 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694964790
-default_env.tres::Environment::-1::1694964772::0::1::::<><>::
-icon.png::CompressedTexture2D::5215518779083058843::1681605334::1694964792::1::::<><>::
-test.gd::GDScript::-1::1694964772::0::1::::<>Node2D<>::
-test.tscn::PackedScene::-1::1694964772::0::1::::<><>::res://test.gd
