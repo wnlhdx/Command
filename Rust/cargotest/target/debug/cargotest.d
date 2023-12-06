@@ -1,1 +1,1 @@
-/data/data/com.termux/files/home/cmdcode/Rust/cargotest/target/debug/cargotest: /data/data/com.termux/files/home/cmdcode/Rust/cargotest/src/main.rs
+D:\work\code\command\github\Rust\cargotest\target\debug\cargotest.exe: D:\work\code\command\github\Rust\cargotest\src\main.rs
