@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231209 04:43:43.916" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuit" source="D:\work\code\command\github\test\robot-framework\testsuit.robot">
+<test id="s1-t1" name="Login Test" line="2">
+<kw name="Open Browser">
+<arg>https://www.example.com</arg>
+<arg>chrome</arg>
+<msg timestamp="20231209 04:43:44.091" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20231209 04:43:44.091" endtime="20231209 04:43:44.091"/>
+</kw>
+<kw name="Input Text">
+<arg>username_field</arg>
+<arg>testuser</arg>
+<status status="NOT RUN" starttime="20231209 04:43:44.093" endtime="20231209 04:43:44.093"/>
+</kw>
+<kw name="Input Password">
+<arg>password_field</arg>
+<arg>12345</arg>
+<status status="NOT RUN" starttime="20231209 04:43:44.094" endtime="20231209 04:43:44.094"/>
+</kw>
+<kw name="Click Button">
+<arg>login_button</arg>
+<status status="NOT RUN" starttime="20231209 04:43:44.095" endtime="20231209 04:43:44.095"/>
+</kw>
+<kw name="Page Should Contain">
+<arg>Welcome, testuser</arg>
+<status status="NOT RUN" starttime="20231209 04:43:44.096" endtime="20231209 04:43:44.096"/>
+</kw>
+<doc>This is a test case for login functionality</doc>
+<status status="FAIL" starttime="20231209 04:43:44.090" endtime="20231209 04:43:44.097">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20231209 04:43:43.919" endtime="20231209 04:43:44.098"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuit">Testsuit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

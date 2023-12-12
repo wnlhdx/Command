@@ -1,0 +1,65 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55b368459d90 .scope module, "test" "test" 2 3;
+ .timescale -9 -9;
+v0x55b3684a60c0_0 .var "A", 0 0;
+v0x55b3684a6180_0 .var "B", 0 0;
+v0x55b3684a6250_0 .net "Carry", 0 0, L_0x55b3684a6580;  1 drivers
+v0x55b3684a6350_0 .net "Sum", 0 0, L_0x55b3684a6420;  1 drivers
+E_0x55b368495ef0 .event posedge, v0x55b3684a5f50_0, v0x55b3684a5e80_0;
+S_0x55b368459f40 .scope module, "dut" "half_adder" 2 6, 3 1 0, S_0x55b368459d90;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Sum";
+    .port_info 3 /OUTPUT 1 "Carry";
+L_0x55b3684a6420 .functor XOR 1, v0x55b3684a60c0_0, v0x55b3684a6180_0, C4<0>, C4<0>;
+L_0x55b3684a6580 .functor AND 1, v0x55b3684a60c0_0, v0x55b3684a6180_0, C4<1>, C4<1>;
+v0x55b368495140_0 .net "A", 0 0, v0x55b3684a60c0_0;  1 drivers
+v0x55b3684a5dc0_0 .net "B", 0 0, v0x55b3684a6180_0;  1 drivers
+v0x55b3684a5e80_0 .net "Carry", 0 0, L_0x55b3684a6580;  alias, 1 drivers
+v0x55b3684a5f50_0 .net "Sum", 0 0, L_0x55b3684a6420;  alias, 1 drivers
+    .scope S_0x55b368459d90;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b3684a60c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b3684a6180_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b3684a60c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b3684a6180_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b3684a60c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b3684a6180_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b3684a60c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b3684a6180_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 42 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55b368459d90;
+T_1 ;
+    %wait E_0x55b368495ef0;
+    %vpi_call 2 47 "$display", "A=%b, B=%b, Sum=%b, Carry=%b", v0x55b3684a60c0_0, v0x55b3684a6180_0, v0x55b3684a6350_0, v0x55b3684a6250_0 {0 0 0};
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "test.v";
+    "./half_adder.v";
