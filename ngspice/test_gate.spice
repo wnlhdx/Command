@@ -1,0 +1,25 @@
+* Four logic gates example
+.include logic_gate.spice
+
+* AND gate
+VinA A 0 DC 5V
+VinB B 0 DC 3V
+and A B Y
+.print DC V(Y)
+
+* OR gate
+VinA A 0 DC 5V
+VinB B 0 DC 3V
+or A B Y
+.print DC V(Y)
+
+* XOR gate
+VinA A 0 DC 5V
+VinB B 0 DC 3V
+xor A B Y
+.print DC V( Y)
+
+* NOT gate
+Vin A 0 DC 5V
+not A Y
+.print DC V(Y)

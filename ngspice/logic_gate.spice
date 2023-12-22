@@ -1,0 +1,35 @@
+* Logic gates library
+
+* NMOS transistor model
+.model nmos nmos (level=1 vto=0.7)
+
+* PMOS transistor model
+.model pmos pmos (level=1 vto=-0.7)
+
+* AND gate
+.subckt and A B Y
+M1 Y A 0 0 nmos
+M2 Y B 0 0 nmos
+M3 Y 0 0 B pmos
+.ends
+
+* OR gate
+.subckt or A B Y
+M1 Y A 0 0 pmos
+M2 Y B 0 0 pmos
+M3 Y 0 0 B nmos
+.ends
+
+* XOR gate
+.subckt xor A B Y
+M1 Y A 0 0 nmos
+M2 Y B 0 0 nmos
+M3 Y 0 0 B pmos
+M4 0 A B Y nmos
+.ends
+
+* NOT gate
+.subckt not A Y
+M1 Y A 0 0 nmos
+M2 0 A Y pmos
+.ends

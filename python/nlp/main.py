@@ -11,6 +11,7 @@ nltk.download('maxent_ne_chunker')
 nltk.download('words')  
 nltk.download('punkt')  
 nltk.download('averaged_perceptron_tagger')  
+nltk.download('wordnet')
   
 # 加载spaCy语言模型（例如，英文模型'en_core_web_sm'）  
 nlp = spacy.load('en_core_web_sm')  
@@ -25,8 +26,15 @@ print("NLTK词性标注结果：", tagged)
 entities = ne_chunk(tagged)  
 print("NLTK命名实体识别结果：", entities)  
 
+lemmas = tokens.lemmas()  
+print("NLTK形态学分析结果：",lemmas)
 
-# 使用spaCy进行词性标注和依赖解析  
+
+# 使用spaCy进行语义学和语用学分析
 doc = nlp(sentence)  
-for token in doc:  
-    print("单词：", token.text, "- 词性：", token.pos_, "- 时态：", token.tag_)
+for chunk in doc.chunked():  
+    print(chunk.text, chunk.dep_, chunk.head.text)
+    if chunk.label_ == 'dog':  
+        print(chunk.text, chunk.label_)  
+        break
+
