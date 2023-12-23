@@ -1,7 +1,7 @@
 import math
 import re
 
-print([2.5,2.2]**(1/2))
+print(2**(1/2))
 print(2 ** 3)
 print(len(str(2 ** 3)))
 print(math.pi)
@@ -32,3 +32,5 @@ can you
 print("\u00c4")
 print(a.encode("utf8"))
 print(re.match('can (,*)', a))
+c="?"
+print(f"test{c}test")
