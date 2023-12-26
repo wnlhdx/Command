@@ -35,6 +35,6 @@ def download_mp3(links, output_dir):
   
 if __name__ == '__main__':  
     url = 'https://dictionary.cambridge.org/help/phonetics.html'  # 替换为你要爬取的网页URL  
-    output_dir = 'output'  # 下载的MP3文件保存路径，可以根据需要更改  
+    output_dir = 'dj'  # 下载的MP3文件保存路径，可以根据需要更改  
     mp3_links = get_mp3_links(url)  
     download_mp3(mp3_links, output_dir)
