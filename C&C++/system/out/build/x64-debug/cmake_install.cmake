@@ -1,8 +1,8 @@
-# Install script for directory: D:/work/code/command/github/C&C++/demo2
+# Install script for directory: D:/work/code/command/github/C&C++/system
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/work/code/command/github/C&C++/demo2/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "D:/work/code/command/github/C&C++/system/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/work/code/command/github/C&C++/demo2/out/build/x64-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/work/code/command/github/C&C++/system/out/build/x64-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

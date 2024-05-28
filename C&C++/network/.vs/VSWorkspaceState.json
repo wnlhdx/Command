@@ -1,6 +1,6 @@
 {
   "OutputFoldersPerTargetSystem": {
-    "本地计算机": [
+    "\u672C\u5730\u8BA1\u7B97\u673A": [
       "out\\build\\x64-debug",
       "out\\install\\x64-debug",
       "out\\build\\x64-release",
@@ -14,6 +14,6 @@
   "ExpandedNodes": [
     ""
   ],
-  "SelectedNode": "\\demo2.cpp",
+  "SelectedNode": "\\network.cpp",
   "PreviewInSolutionExplorer": false
 }
