@@ -1,47 +1,62 @@
-from fenics import *
+import numpy as np
+from sympy import symbols, Eq, solve
 
-# 创建一个简单的正方体 mesh
-mesh = UnitCubeMesh(8, 8, 8)
+# 定义木块的尺寸
+L, W, H = 1, 1, 1  # 假设木块的尺寸为1米
 
-# 定义函数空间
-V = VectorFunctionSpace(mesh, 'P', 1)
+# 定义外力
+F = 1000  # 垂直于底面的力，单位：牛顿
+P = 500   # 水平力，单位：牛顿
+Q = 200   # 垂直于侧面的力，单位：牛顿
 
-# 边界条件
-def boundary(x, on_boundary):
-    return on_boundary
+# 木块的质量，假设为1千克
+m = 1
 
-bc = DirichletBC(V, Constant((0, 0, 0)), boundary)
+# 重力加速度，单位：米/秒^2
+g = 9.81
 
-# 材料参数（弹性模量和泊松比）
-E = 70e9
-nu = 0.3
-mu = E / (2 * (1 + nu))
-lmbda = E * nu / ((1 + nu) * (1 - 2 * nu))
+# 计算重力
+G = m * g
 
-# 应力-应变关系（线性弹性模型）
-def sigma(v):
-    return 2.0 * mu * epsilon(v) + lmbda * tr(epsilon(v)) * Identity(len(v))
+# 定义力的矢量
+F_vector = np.array([0, 0, F])  # 垂直力
+P_vector = np.array([P, 0, 0])  # 水平力
+Q_vector = np.array([0, 0, Q])  # 垂直力
 
-# 应变计算
-def epsilon(v):
-    return sym(nabla_grad(v))
+# 计算质心位置
+center_of_mass = np.array([L / 2, W / 2, H / 2])
 
-# 载荷
-f = Constant((0, 0, -1e3))
+# 计算每个力对质心的力矩
+moment_F = np.cross(F_vector, center_of_mass)
+moment_P = np.cross(P_vector, center_of_mass)
+moment_Q = np.cross(Q_vector, center_of_mass)
 
-# 设定弱形式
-u = TrialFunction(V)
-d = u.geometric_dimension()  # 维度
-v = TestFunction(V)
-a = inner(sigma(u), nabla_grad(v)) * dx
-L = dot(f, v) * dx
+# 计算总力矩
+total_moment = moment_F + moment_P + moment_Q
 
-# 求解
-u = Function(V)
-solve(a == L, u, bc)
+# 检查总力矩是否为零，如果为零，则木块处于静止状态
+if np.linalg.norm(total_moment) == 0:
+    print("木块处于静止状态。")
+else:
+    print("木块不处于静止状态。")
 
-# 输出结果
-file = File("displacement.pvd")
-file << u
+# 定义符号变量
+x, y, Fx, Fy = symbols('x y Fx Fy')
 
-# 可以使用ParaView等工具查看结果
+# 定义力的矢量
+force_vector = [Fx, Fy]
+
+# 假设木块的质心位于其几何中心
+center_of_mass = [L / 2, W / 2]
+
+# 计算每个力对质心的力矩
+moment_F = np.cross(force_vector, center_of_mass)
+
+# 检查总力矩是否为零，如果为零，则木块处于静止状态
+total_moment = moment_F.dot(center_of_mass)
+equation = Eq(total_moment, 0)
+
+# 求解方程
+solution = solve(equation, Fx)
+
+print(f"水平力 Fx 的值：{solution[0]}")

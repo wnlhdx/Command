@@ -15,7 +15,7 @@ project ("theory")
 add_executable (theory "theory.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET database PROPERTY CXX_STANDARD 20)
+  set_property(TARGET theory PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。

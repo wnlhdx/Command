@@ -1,3 +1,5 @@
 # ninja log v5
-2	1236	7383463537394145	CMakeFiles/database.dir/database.cpp.obj	17c74c275505e087
-1238	3248	7383463555676713	database.exe	8959b0770f6827a8
+2	1578	7390376089759785	CMakeFiles/theory.dir/theory.cpp.obj	ef275b9de46f2c0e
+1580	2658	7390376099964418	theory.exe	8b6978ed7badd086
+3	795	7390376513633990	CMakeFiles/theory.dir/theory.cpp.obj	ef275b9de46f2c0e
+796	1175	7390376516527747	theory.exe	8b6978ed7badd086
