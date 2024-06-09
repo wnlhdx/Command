@@ -76,7 +76,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = D:\software\study\develop\Cmake\bin\cmake.exe --regenerate-during-build -S"D:\work\code\command\github\C&C++\gameEngine" -B"D:\work\code\command\github\C&C++\gameEngine\out\build\x64-debug"
+  command = D:\software\study\develop\Cmake\bin\cmake.exe --regenerate-during-build -S"D:\work\code\command\github\C&C++\gameEngine" -B"D:\work\code\command\github\C&C++\gameEngine\out\build\x64-Debug"
   description = Re-running CMake...
   generator = 1
 

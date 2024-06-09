@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:graphicsAPI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\gameEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gameEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -21,8 +25,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CMakeLists.txt",
+              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt",
+              "RelativeDocumentMoniker": "CMakeLists.txt",
+              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt",
+              "RelativeToolTip": "CMakeLists.txt",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-09T14:19:52.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "gameEngine.cpp",
+              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\gameEngine.cpp",
+              "RelativeDocumentMoniker": "gameEngine.cpp",
+              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\gameEngine.cpp",
+              "RelativeToolTip": "gameEngine.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-09T14:07:15.561Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -31,40 +63,22 @@
               "RelativeDocumentMoniker": "graphicsAPI.cpp",
               "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\graphicsAPI.cpp",
               "RelativeToolTip": "graphicsAPI.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-09T13:17:41.871Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FindPackageHandleStandardArgs.cmake",
               "DocumentMoniker": "D:\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
               "ToolTip": "D:\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
-              "ViewState": "AQIAAL8AAAAAAAAAAAAswOsAAAAKAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAswOsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-06-09T13:05:22.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "CMakeLists.txt",
-              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt",
-              "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-06-09T13:03:29.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2024-06-09T13:05:22.534Z"
             }
           ]
         }

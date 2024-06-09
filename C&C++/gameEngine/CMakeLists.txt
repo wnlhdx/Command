@@ -6,8 +6,11 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
+
+project ("gameEngine")
+
 # Check if we are building for x86 Windows or ARM Termux
-if (CMAKE_SIZEOF_VOID_P EQUAL 8)
+if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
   # 64-bit architecture, assume it's x86 Windows with Vulkan SDK installed
   find_package(Vulkan REQUIRED)
 else()
@@ -15,8 +18,6 @@ else()
   set(Vulkan_INCLUDE_DIRS "/usr/include")
   set(Vulkan_LIBRARIES "/usr/lib/libvulkan.so")
 endif()
-
-project ("gameEngine")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (gameEngine "gameEngine.cpp" "graphicsAPI.cpp")

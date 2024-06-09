@@ -22,8 +22,8 @@ private:
   int _height;
 };
 
-int main() {
+/*int main() {
   Engine engine("My Game", 800, 600);
   engine.run();
   return 0;
-}
+}*/
