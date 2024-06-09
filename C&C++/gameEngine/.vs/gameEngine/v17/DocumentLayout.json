@@ -1,7 +1,19 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\graphicsAPI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:graphicsAPI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +21,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "graphicsAPI.cpp",
+              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\graphicsAPI.cpp",
+              "RelativeDocumentMoniker": "graphicsAPI.cpp",
+              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\graphicsAPI.cpp",
+              "RelativeToolTip": "graphicsAPI.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-09T13:17:41.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FindPackageHandleStandardArgs.cmake",
+              "DocumentMoniker": "D:\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
+              "ToolTip": "D:\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\software\\study\\develop\\Cmake\\share\\cmake-3.29\\Modules\\FindPackageHandleStandardArgs.cmake",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAswOsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-09T13:05:22.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CMakeLists.txt",
+              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt",
+              "RelativeDocumentMoniker": "CMakeLists.txt",
+              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\CMakeLists.txt",
+              "RelativeToolTip": "CMakeLists.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-09T13:03:29.753Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"

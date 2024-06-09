@@ -1,0 +1,3 @@
+D:/work/code/command/github/C&C++/gameEngine/out/build/x64-debug/CMakeFiles/gameEngine.dir
+D:/work/code/command/github/C&C++/gameEngine/out/build/x64-debug/CMakeFiles/edit_cache.dir
+D:/work/code/command/github/C&C++/gameEngine/out/build/x64-debug/CMakeFiles/rebuild_cache.dir

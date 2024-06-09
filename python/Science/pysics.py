@@ -1,2 +1,4 @@
-from pint import UnitRegistry
+import pint 
 import numpy
+import scipy
+import decimal
