@@ -25,12 +25,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -63,7 +59,7 @@
               "RelativeDocumentMoniker": "graphicsAPI.cpp",
               "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\gameEngine\\graphicsAPI.cpp",
               "RelativeToolTip": "graphicsAPI.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-09T13:17:41.871Z",
               "EditorCaption": ""
@@ -79,6 +75,10 @@
               "ViewState": "AQIAAIkAAAAAAAAAAAAswOsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-06-09T13:05:22.534Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
