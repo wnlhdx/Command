@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\game.dir\\game.cpp.obj",
+            "outputs": [
+                "D:\\work\\code\\command\\github\\C&C++\\game\\out\\build\\x64-debug\\vc140.pdb",
+                "CMakeFiles\\game.dir\\game.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

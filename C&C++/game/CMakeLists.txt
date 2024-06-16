@@ -9,12 +9,14 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
+set(CMAKE_CXX_STANDARD 23)
+
 project ("game")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (game   "game.cpp" )
 
-if (CMAKE_VERSION VERSION_GREATER 3.30)
+if (CMAKE_VERSION VERSION_GREATER 3.29)
   set_property(TARGET game PROPERTY CXX_STANDARD 23)
 endif()
 

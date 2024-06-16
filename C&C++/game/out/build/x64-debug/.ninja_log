@@ -1,3 +1,7 @@
 # ninja log v5
-3	499	7397957064440597	CMakeFiles/game.dir/game.cpp.obj	ae10e73b6bfb10fc
-500	888	7397957067248945	game.exe	6dfaf22a8450f2f2
+2	504	7402268478191315	CMakeFiles/game.dir/game.cpp.obj.ddi	91a540ecd544f583
+534	574	7402268478896513	CMakeFiles/game.dir/CXX.dd	35995d058e7c1011
+534	574	7402268478896513	D:/work/code/command/github/C&C++/game/out/build/x64-debug/CMakeFiles/game.dir/CXXModules.json	35995d058e7c1011
+534	574	7402268478896513	CMakeFiles/game.dir/game.cpp.obj.modmap	35995d058e7c1011
+575	2435	7402268497452830	CMakeFiles/game.dir/game.cpp.obj	3429fbb63a71bc31
+2437	3106	7402268503442462	game.exe	6dfaf22a8450f2f2

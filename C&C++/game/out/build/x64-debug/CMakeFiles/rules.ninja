@@ -18,6 +18,35 @@ msvc_deps_prefix = 注意: 包含文件:
 
 
 #############################################
+# Rule for generating CXX dependencies.
+
+rule CXX_SCAN__game_Debug
+  deps = msvc
+  command = D:\software\study\develop\ide\visualstudio\ide\VC\Tools\MSVC\14.40.33807\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
+  description = Scanning $in for CXX dependencies
+
+
+#############################################
+# Rule to generate ninja dyndep files for CXX.
+
+rule CXX_DYNDEP__game_Debug
+  command = D:\software\study\develop\Cmake\bin\cmake.exe -E cmake_ninja_dyndep --tdi=CMakeFiles\game.dir\CXXDependInfo.json --lang=CXX --modmapfmt=msvc --dd=$out @$out.rsp
+  description = Generating CXX dyndep file $out
+  rspfile = $out.rsp
+  rspfile_content = $in
+  restat = 1
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__game_scanned_Debug
+  deps = msvc
+  command = ${LAUNCHER}${CODE_CHECK}D:\software\study\develop\ide\visualstudio\ide\VC\Tools\MSVC\14.40.33807\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  description = Building CXX object $out
+
+
+#############################################
 # Rule for compiling CXX files.
 
 rule CXX_COMPILER__game_unscanned_Debug
