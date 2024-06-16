@@ -19,11 +19,13 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 else()
   # 32-bit architecture, assume it's ARM Termux
   set(CMAKE_PREFIX_PATH "/data/data/com.termux/files/usr/lib/qt6")
+  set(Qt6_DIR "/data/data/com.termux/files/usr/lib/qt6/lib/cmake/Qt6")
+  set(QT_HOST_PATH "/data/data/com.termux/files/usr")
 endif()
 
 
 
-find_package(Qt6  REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6  REQUIRED COMPONENTS Core  Widgets)
 
 qt_standard_project_setup()
 
@@ -34,7 +36,6 @@ qt_add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} 
     PRIVATE
         Qt6::Core
-        Qt6::Gui
         Qt6::Widgets
 )
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
