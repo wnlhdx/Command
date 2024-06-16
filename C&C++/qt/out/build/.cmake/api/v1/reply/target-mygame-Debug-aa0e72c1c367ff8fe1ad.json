@@ -28,16 +28,19 @@
 		[
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 			"CMakeLists.txt",
+			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
 			"D:/software/study/develop/Cmake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
 			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
-			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake"
+			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake"
 		],
 		"nodes" : 
 		[
@@ -47,7 +50,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 30,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
@@ -71,8 +74,44 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 34,
+				"line" : 49,
 				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"file" : 4,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 169,
+				"parent" : 7
+			},
+			{
+				"file" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 55,
+				"parent" : 9
+			},
+			{
+				"file" : 2,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 61,
+				"parent" : 11
 			},
 			{
 				"command" : 4,
@@ -82,119 +121,131 @@
 			},
 			{
 				"command" : 7,
-				"file" : 1,
-				"line" : 26,
-				"parent" : 0
-			},
-			{
 				"file" : 4,
+				"line" : 169,
 				"parent" : 7
 			},
 			{
-				"command" : 7,
-				"file" : 4,
-				"line" : 169,
-				"parent" : 8
-			},
-			{
-				"file" : 3,
-				"parent" : 9
-			},
-			{
-				"command" : 6,
-				"file" : 3,
-				"line" : 57,
-				"parent" : 10
-			},
-			{
-				"file" : 2,
-				"parent" : 11
-			},
-			{
-				"command" : 5,
-				"file" : 2,
-				"line" : 61,
-				"parent" : 12
-			},
-			{
-				"command" : 6,
-				"file" : 3,
-				"line" : 45,
-				"parent" : 10
-			},
-			{
-				"file" : 9,
+				"file" : 6,
 				"parent" : 14
 			},
 			{
-				"command" : 9,
-				"file" : 9,
-				"line" : 42,
+				"command" : 6,
+				"file" : 6,
+				"line" : 57,
 				"parent" : 15
 			},
 			{
-				"command" : 8,
-				"file" : 8,
-				"line" : 111,
-				"parent" : 16
-			},
-			{
-				"command" : 7,
-				"file" : 7,
-				"line" : 76,
-				"parent" : 17
-			},
-			{
-				"file" : 6,
-				"parent" : 18
-			},
-			{
-				"command" : 6,
-				"file" : 6,
-				"line" : 55,
-				"parent" : 19
-			},
-			{
 				"file" : 5,
-				"parent" : 20
+				"parent" : 16
 			},
 			{
 				"command" : 5,
 				"file" : 5,
 				"line" : 61,
-				"parent" : 21
+				"parent" : 17
 			},
 			{
-				"command" : 5,
-				"file" : 5,
-				"line" : 76,
+				"command" : 6,
+				"file" : 6,
+				"line" : 45,
+				"parent" : 15
+			},
+			{
+				"file" : 11,
+				"parent" : 19
+			},
+			{
+				"command" : 9,
+				"file" : 11,
+				"line" : 42,
+				"parent" : 20
+			},
+			{
+				"command" : 8,
+				"file" : 10,
+				"line" : 111,
 				"parent" : 21
 			},
 			{
 				"command" : 7,
-				"file" : 4,
-				"line" : 169,
-				"parent" : 8
+				"file" : 9,
+				"line" : 76,
+				"parent" : 22
 			},
 			{
-				"file" : 11,
-				"parent" : 24
+				"file" : 8,
+				"parent" : 23
 			},
 			{
 				"command" : 6,
-				"file" : 11,
+				"file" : 8,
 				"line" : 55,
+				"parent" : 24
+			},
+			{
+				"file" : 7,
 				"parent" : 25
 			},
 			{
-				"file" : 10,
+				"command" : 5,
+				"file" : 7,
+				"line" : 61,
 				"parent" : 26
 			},
 			{
 				"command" : 5,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 26
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 43,
+				"parent" : 9
+			},
+			{
+				"file" : 14,
+				"parent" : 29
+			},
+			{
+				"command" : 9,
+				"file" : 14,
+				"line" : 42,
+				"parent" : 30
+			},
+			{
+				"command" : 8,
 				"file" : 10,
+				"line" : 111,
+				"parent" : 31
+			},
+			{
+				"command" : 7,
+				"file" : 9,
+				"line" : 76,
+				"parent" : 32
+			},
+			{
+				"file" : 13,
+				"parent" : 33
+			},
+			{
+				"command" : 6,
+				"file" : 13,
+				"line" : 55,
+				"parent" : 34
+			},
+			{
+				"file" : 12,
+				"parent" : 35
+			},
+			{
+				"command" : 5,
+				"file" : 12,
 				"line" : 61,
-				"parent" : 27
+				"parent" : 36
 			}
 		]
 	},
@@ -207,22 +258,22 @@
 					"fragment" : "-DQT_QML_DEBUG /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"fragment" : "-Zc:__cplusplus"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"fragment" : "-permissive-"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"fragment" : "-utf-8"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "QT_CORE_LIB"
 				},
 				{
@@ -234,27 +285,27 @@
 					"define" : "QT_WIDGETS_LIB"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "UNICODE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "WIN32"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "WIN64"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "_UNICODE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"define" : "_WIN64"
 				}
 			],
@@ -266,19 +317,24 @@
 					"path" : "D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/include"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"isSystem" : true,
 					"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/include/QtCore"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"isSystem" : true,
 					"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/include"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 13,
 					"isSystem" : true,
 					"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/mkspecs/win32-msvc"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/include/QtWidgets"
 				},
 				{
 					"backtrace" : 5,
@@ -289,11 +345,6 @@
 					"backtrace" : 5,
 					"isSystem" : true,
 					"path" : "D:/software/study/develop/vulkan/Include"
-				},
-				{
-					"backtrace" : 5,
-					"isSystem" : true,
-					"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/include/QtWidgets"
 				}
 			],
 			"language" : "CXX",
@@ -301,8 +352,8 @@
 			{
 				"backtraces" : 
 				[
-					6,
-					6
+					13,
+					13
 				],
 				"standard" : "17"
 			},
@@ -342,52 +393,52 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 5,
+				"backtrace" : 12,
 				"fragment" : "D:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\lib\\Qt6Guid.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 6,
+				"backtrace" : 13,
 				"fragment" : "D:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\lib\\Qt6Cored.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 13,
+				"backtrace" : 18,
 				"fragment" : "mpr.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 13,
+				"backtrace" : 18,
 				"fragment" : "userenv.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 22,
+				"backtrace" : 27,
 				"fragment" : "D:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\lib\\Qt6EntryPointd.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 23,
+				"backtrace" : 28,
 				"fragment" : "shell32.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 28,
+				"backtrace" : 37,
 				"fragment" : "d3d11.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 28,
+				"backtrace" : 37,
 				"fragment" : "dxgi.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 28,
+				"backtrace" : 37,
 				"fragment" : "dxguid.lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 28,
+				"backtrace" : 37,
 				"fragment" : "d3d12.lib",
 				"role" : "libraries"
 			},

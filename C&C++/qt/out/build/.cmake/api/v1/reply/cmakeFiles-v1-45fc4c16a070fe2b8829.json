@@ -489,6 +489,109 @@
 		},
 		{
 			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Cmake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Cmake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Cmake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
 			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake"
 		},
 		{
@@ -561,14 +664,6 @@
 		{
 			"isExternal" : true,
 			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-debug.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -851,68 +946,6 @@
 		{
 			"isExternal" : true,
 			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginAdditionalTargetInfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Cmake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Cmake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-debug.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "D:/software/study/develop/Qt6/6.7.1/msvc2019_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake"
 		},
 		{
 			"isExternal" : true,

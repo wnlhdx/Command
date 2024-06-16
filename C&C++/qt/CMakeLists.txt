@@ -21,6 +21,19 @@ else()
   set(CMAKE_PREFIX_PATH "/data/data/com.termux/files/usr/lib/qt6")
   set(Qt6_DIR "/data/data/com.termux/files/usr/lib/qt6/lib/cmake/Qt6")
   set(QT_HOST_PATH "/data/data/com.termux/files/usr")
+  
+# 获取 pkg-config 输出
+execute_process(
+    COMMAND pkg-config --cflags --libs Qt6Core Qt6Gui Qt6Widgets
+    OUTPUT_VARIABLE QT6_PKG_CONFIG_FLAGS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+# 将输出解析为列表并设置编译器和链接器标志
+separate_arguments(QT6_PKG_CONFIG_FLAGS)
+add_compile_options(${QT6_PKG_CONFIG_FLAGS})
+add_link_options(${QT6_PKG_CONFIG_FLAGS})
+
 endif()
 
 
@@ -45,7 +58,13 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
     )
 endif()
 
+# 检测是否在 Termux 环境
+if(DEFINED ENV{TERMUX})
+    message(STATUS "Compiling for Termux")
 
+    # Termux 特定的设置
+    add_definitions(-DTERMUX)
+endif()
 
 
  # 将源代码添加到此项目的可执行文件。
