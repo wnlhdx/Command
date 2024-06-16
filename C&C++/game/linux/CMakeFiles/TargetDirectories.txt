@@ -1,0 +1,3 @@
+/data/data/com.termux/files/home/InnerCode/Command/C&C++/game/linux/CMakeFiles/game.dir
+/data/data/com.termux/files/home/InnerCode/Command/C&C++/game/linux/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/InnerCode/Command/C&C++/game/linux/CMakeFiles/rebuild_cache.dir

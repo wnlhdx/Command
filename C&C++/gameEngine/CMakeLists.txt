@@ -15,8 +15,8 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
   find_package(Vulkan REQUIRED)
 else()
   # 32-bit architecture, assume it's ARM Termux
-  set(Vulkan_INCLUDE_DIRS "/usr/include")
-  set(Vulkan_LIBRARIES "/usr/lib/libvulkan.so")
+  set(Vulkan_INCLUDE_DIRS "/data/data/com.termux/files/usr/include/vulkan/")
+  set(Vulkan_LIBRARIES "/data/data/com.termux/files/usr/lib/libvulkan.so")
 endif()
 
 # 将源代码添加到此项目的可执行文件。

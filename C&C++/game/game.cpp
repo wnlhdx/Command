@@ -1,5 +1,6 @@
 #include <iostream>
-#include <conio.h> // 用于_getch()，仅适用于Windows
+#include <thread> // 用于 std::this_thread::sleep_for
+#include <chrono> // 用于 std::chrono::milliseconds
 
 // 定义地图类
 class Map {
@@ -79,25 +80,38 @@ public:
         }
     }
 };
+// 跨平台的清屏方法
+void clearScreen() {
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
 
 // 游戏主循环
 void gameLoop(Map& map, Player& player) {
     bool running = true;
     while (running) {
         // 清屏
-        system("cls"); // 仅适用于Windows
+        clearScreen();
 
         // 绘制地图
         map.Draw();
 
         // 处理玩家输入
-        char key = _getch(); // 等待按键输入
+        char key;
+        std::cin.get(key); // 等待输入
         player.Move(key, map);
 
         // 检查是否退出
         if (key == 'q' || key == 'Q') {
             running = false;
         }
+
+        // 使用双缓冲技术
+        fflush(stdout);
+        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 等待100毫秒以降低刷新率
     }
 }
 
