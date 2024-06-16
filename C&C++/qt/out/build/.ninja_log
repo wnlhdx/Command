@@ -1,0 +1,15 @@
+# ninja log v5
+5	260	7402408628884852	mygame_autogen/timestamp	d54caef3cd7bea9e
+265	354	7402408630914073	CMakeFiles/mygame.dir/mygame_autogen/mocs_compilation.cpp.obj	a2619ef37d133bc0
+5	260	7402408628884852	mygame_autogen/mocs_compilation.cpp	d54caef3cd7bea9e
+270	2219	7402408649509327	CMakeFiles/mygame.dir/mygame.cpp.obj	9eca6cfd6ac0e5ec
+5	260	7402408628884852	D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/timestamp	d54caef3cd7bea9e
+5	260	7402408628884852	D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/mocs_compilation.cpp	d54caef3cd7bea9e
+2222	3119	7402408658063955	mygame.exe	aa90488a6280f069
+613	740	7402407006765294	mygame_autogen/timestamp	d54caef3cd7bea9e
+613	740	7402407006765294	mygame_autogen/mocs_compilation.cpp	d54caef3cd7bea9e
+613	740	7402407006765294	D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/timestamp	d54caef3cd7bea9e
+613	740	7402407006765294	D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/mocs_compilation.cpp	d54caef3cd7bea9e
+744	836	7402412331290823	CMakeFiles/mygame.dir/mygame_autogen/mocs_compilation.cpp.obj	53f4c95ad3965cde
+750	2658	7402412349492164	CMakeFiles/mygame.dir/mygame.cpp.obj	de5a97ea0fde6069
+2659	3119	7402412352961899	mygame.exe	aa90488a6280f069

@@ -1,21 +1,20 @@
 ﻿# CMakeList.txt: demo2 的 CMake 项目，在此处包括源代码并定义
 # 项目特定的逻辑。
 #
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.29)
 
-# Enable Hot Reload for MSVC compilers if supported.
-if (POLICY CMP0141)
-  cmake_policy(SET CMP0141 NEW)
-  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
-endif()
+
+set(CMAKE_C_STANDARD 23) # 设置 C 语言标准
+
 
 project ("theory")
 
-# 将源代码添加到此项目的可执行文件。
-add_executable (theory "theory.cpp")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET theory PROPERTY CXX_STANDARD 20)
-endif()
+# 定义源文件
+set(SOURCES   "theory.c") # 其他源文件
+
+# 将源代码添加到此项目的可执行文件。
+add_executable (theory "theory.c")
+
 
 # TODO: 如有需要，请添加测试并安装目标。

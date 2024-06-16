@@ -1,53 +1,40 @@
 import random
 
-class Army:
-    def __init__(self, size):
-        self.size = size
-        self.position = (0, 0)
-        self.conquered_territories = []
+class CombatUnit:
+    def __init__(self, name, strength, attack_power, defense, morale):
+        self.name = name
+        self.strength = strength
+        self.attack_power = attack_power
+        self.defense = defense
+        self.morale = morale  # 意志力
 
-    def move(self, direction):
-        if direction == 'n':
-            self.position = (self.position[0], self.position[1] - 1)
-        elif direction == 's':
-            self.position = (self.position[0], self.position[1] + 1)
-        elif direction == 'e':
-            self.position = (self.position[0] + 1, self.position[1])
-        elif direction == 'w':
-            self.position = (self.position[0] - 1, self.position[1])
+    def attack(self, other):
+        damage = self.attack_power - other.defense
+        damage = max(0, damage)  # 伤害不能小于0
+        other.strength -= damage
+        print(f"{self.name} attacks {other.name}, causing {damage} damage. {other.name}'s remaining strength: {other.strength}")
 
-    def attack(self, other_army):
-        if self.position == other_army.position:
-            # 计算战斗结果
-            if random.choice([True, False]):
-                # 攻击者获胜
-                other_army.size -= self.size
-                self.conquered_territories.append(other_army.conquered_territories)
-                other_army.conquered_territories = []
-            else:
-                # 被攻击者获胜
-                self.size -= other_army.size
-                other_army.conquered_territories.append(self.conquered_territories)
-                self.conquered_territories = []
+    def is_alive(self):
+        return self.strength > 0 and self.morale > 0  # 战斗力和士气都需要大于0
 
-    def display(self):
-        print(f"Army at {self.position}, size: {self.size}, conquered territories: {self.conquered_territories}")
+def battle_simulation(unit1, unit2):
+    while unit1.is_alive() and unit2.is_alive():
+        if random.random() < 0.1:  # 引入不可预测因素，如意外情况，10%的概率该回合不发生战斗
+            print("An unexpected event occurs. No combat this round.")
+        else:
+            unit1.attack(unit2)
+            if unit2.is_alive():
+                unit2.attack(unit1)
+            # 每轮战斗后，双方的士气可能会受到影响
+            unit1.morale *= 0.99
+            unit2.morale *= 0.99
 
-# 创建亚历山大大帝的军队
-alexander_army = Army(1000)
-alexander_army.position = (0, 0)
+    winner = unit1 if unit1.is_alive() else unit2
+    print(f"{winner.name} wins!")
 
-# 创建其他军队
-darius_army = Army(1500)
-darius_army.position = (5, 5)
+# 初始化战斗单位，增加防御力和士气属性
+unit1 = CombatUnit("Unit A", 100, 15, 5, 1.0)
+unit2 = CombatUnit("Unit B", 120, 10, 4, 1.0)
 
-# 模拟亚历山大大帝的征服
-while alexander_army.size > 0 and darius_army.size > 0:
-    alexander_army.move('e')
-    darius_army.move('w')
-    if alexander_army.position == darius_army.position:
-        alexander_army.attack(darius_army)
-
-# 打印结果
-alexander_army.display()
-darius_army.display()
+# 进行战斗模拟
+battle_simulation(unit1, unit2)

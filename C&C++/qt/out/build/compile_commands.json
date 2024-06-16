@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/work/code/command/github/C&C++/qt/out/build",
+  "command": "D:\\software\\study\\develop\\ide\\visualstudio\\ide\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -external:I\"D:\\work\\code\\command\\github\\C&C++\\qt\\out\\build\\mygame_autogen\\include\" -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include\\QtCore -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\mkspecs\\win32-msvc -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include\\QtGui -external:ID:\\software\\study\\develop\\vulkan\\Include -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include\\QtWidgets -external:W0 -DQT_QML_DEBUG /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\mygame.dir\\mygame_autogen\\mocs_compilation.cpp.obj /FdCMakeFiles\\mygame.dir\\ /FS -c \"D:\\work\\code\\command\\github\\C&C++\\qt\\out\\build\\mygame_autogen\\mocs_compilation.cpp\"",
+  "file": "D:\\work\\code\\command\\github\\C&C++\\qt\\out\\build\\mygame_autogen\\mocs_compilation.cpp",
+  "output": "CMakeFiles\\mygame.dir\\mygame_autogen\\mocs_compilation.cpp.obj"
+},
+{
+  "directory": "D:/work/code/command/github/C&C++/qt/out/build",
+  "command": "D:\\software\\study\\develop\\ide\\visualstudio\\ide\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -external:I\"D:\\work\\code\\command\\github\\C&C++\\qt\\out\\build\\mygame_autogen\\include\" -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include\\QtCore -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\mkspecs\\win32-msvc -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include\\QtGui -external:ID:\\software\\study\\develop\\vulkan\\Include -external:ID:\\software\\study\\develop\\Qt6\\6.7.1\\msvc2019_64\\include\\QtWidgets -external:W0 -DQT_QML_DEBUG /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi -Zc:__cplusplus -permissive- -utf-8 /FoCMakeFiles\\mygame.dir\\mygame.cpp.obj /FdCMakeFiles\\mygame.dir\\ /FS -c \"D:\\work\\code\\command\\github\\C&C++\\qt\\mygame.cpp\"",
+  "file": "D:\\work\\code\\command\\github\\C&C++\\qt\\mygame.cpp",
+  "output": "CMakeFiles\\mygame.dir\\mygame.cpp.obj"
+}
+]
