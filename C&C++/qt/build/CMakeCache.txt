@@ -28,7 +28,7 @@ CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/data/data/com.termux/files/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/data/data/com.termux/files/usr/bin/c++
 
 //LLVM archiver
 CMAKE_CXX_COMPILER_AR:FILEPATH=/data/data/com.termux/files/usr/bin/llvm-ar
@@ -55,7 +55,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/data/data/com.termux/files/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/data/data/com.termux/files/usr/bin/cc
 
 //LLVM archiver
 CMAKE_C_COMPILER_AR:FILEPATH=/data/data/com.termux/files/usr/bin/llvm-ar
@@ -362,7 +362,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=29
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=5
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=6
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -773,9 +773,9 @@ QT_FEATURE_poll_select:INTERNAL=OFF
 //Qt feature: posix_fallocate (from target Qt6::Core)
 QT_FEATURE_posix_fallocate:INTERNAL=ON
 //Qt feature: posix_sem (from target Qt6::Core)
-QT_FEATURE_posix_sem:INTERNAL=OFF
+QT_FEATURE_posix_sem:INTERNAL=ON
 //Qt feature: posix_shm (from target Qt6::Core)
-QT_FEATURE_posix_shm:INTERNAL=OFF
+QT_FEATURE_posix_shm:INTERNAL=ON
 //Qt feature: precompile_header (from target Qt6::Core)
 QT_FEATURE_precompile_header:INTERNAL=ON
 //Qt feature: printsupport (from target Qt6::Core)
@@ -863,9 +863,9 @@ QT_FEATURE_system_zlib:INTERNAL=ON
 //Qt feature: systemsemaphore (from target Qt6::Core)
 QT_FEATURE_systemsemaphore:INTERNAL=ON
 //Qt feature: sysv_sem (from target Qt6::Core)
-QT_FEATURE_sysv_sem:INTERNAL=ON
+QT_FEATURE_sysv_sem:INTERNAL=OFF
 //Qt feature: sysv_shm (from target Qt6::Core)
-QT_FEATURE_sysv_shm:INTERNAL=ON
+QT_FEATURE_sysv_shm:INTERNAL=OFF
 //Qt feature: temporaryfile (from target Qt6::Core)
 QT_FEATURE_temporaryfile:INTERNAL=ON
 //Qt feature: testlib (from target Qt6::Core)
