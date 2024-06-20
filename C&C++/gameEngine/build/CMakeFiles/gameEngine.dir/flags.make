@@ -4,7 +4,7 @@
 # compile CXX with /data/data/com.termux/files/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/data/data/com.termux/files/usr/include/vulkan
+CXX_INCLUDES = -I/data/data/com.termux/files/usr/lib/glfw -I/data/data/com.termux/files/usr/lib/glm -I/data/data/com.termux/files/usr/include/vulkan
 
 CXX_FLAGS = -O2 -g -DNDEBUG -std=gnu++20
 

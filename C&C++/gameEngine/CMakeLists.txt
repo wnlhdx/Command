@@ -17,10 +17,14 @@ else()
   # 32-bit architecture, assume it's ARM Termux
   set(Vulkan_INCLUDE_DIRS "/data/data/com.termux/files/usr/include/vulkan/")
   set(Vulkan_LIBRARIES "/data/data/com.termux/files/usr/lib/libvulkan.so")
+  set(OPENGL_INCLUDE_DIR "/data/data/com.termux/files/usr/include")
+  set(OPENGL_gl_LIBRARY "/data/data/com.termux/files/usr/lib/libGL.so")
+  include_directories("/data/data/com.termux/files/usr/lib/glfw")
+  include_directories("/data/data/com.termux/files/usr/lib/glm")
 endif()
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (gameEngine "gameEngine.cpp" "graphicsAPI.cpp")
+add_executable (gameEngine  "graphicsAPI.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET gameEngine PROPERTY CXX_STANDARD 20)

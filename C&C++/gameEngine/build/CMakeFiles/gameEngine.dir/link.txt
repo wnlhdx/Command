@@ -1,1 +1,1 @@
-/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/gameEngine.dir/gameEngine.cpp.o CMakeFiles/gameEngine.dir/graphicsAPI.cpp.o -o gameEngine  /data/data/com.termux/files/usr/lib/libvulkan.so
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/gameEngine.dir/graphicsAPI.cpp.o -o gameEngine  /data/data/com.termux/files/usr/lib/libvulkan.so

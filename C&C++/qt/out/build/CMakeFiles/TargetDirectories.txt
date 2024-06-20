@@ -1,5 +1,0 @@
-D:/work/code/command/github/C&C++/qt/out/build/CMakeFiles/mygame.dir
-D:/work/code/command/github/C&C++/qt/out/build/CMakeFiles/edit_cache.dir
-D:/work/code/command/github/C&C++/qt/out/build/CMakeFiles/rebuild_cache.dir
-D:/work/code/command/github/C&C++/qt/out/build/CMakeFiles/mygame_autogen_timestamp_deps.dir
-D:/work/code/command/github/C&C++/qt/out/build/CMakeFiles/mygame_autogen.dir

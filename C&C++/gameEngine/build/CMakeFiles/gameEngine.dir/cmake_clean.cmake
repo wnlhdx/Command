@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/gameEngine.dir/gameEngine.cpp.o"
-  "CMakeFiles/gameEngine.dir/gameEngine.cpp.o.d"
   "CMakeFiles/gameEngine.dir/graphicsAPI.cpp.o"
   "CMakeFiles/gameEngine.dir/graphicsAPI.cpp.o.d"
   "gameEngine"

@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/data/data/com.termux/files/home/InnerCode/Command/C&C++/gameEngine/graphicsAPI.cpp" "CMakeFiles/gameEngine.dir/graphicsAPI.cpp.o" "gcc" "CMakeFiles/gameEngine.dir/graphicsAPI.cpp.o.d"
+  "/data/data/com.termux/files/home/InnerCode/Command/C&C++/qt/main.cpp" "CMakeFiles/qtgame.dir/main.cpp.o" "gcc" "CMakeFiles/qtgame.dir/main.cpp.o.d"
+  "/data/data/com.termux/files/home/InnerCode/Command/C&C++/qt/qtgame.cpp" "CMakeFiles/qtgame.dir/qtgame.cpp.o" "gcc" "CMakeFiles/qtgame.dir/qtgame.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

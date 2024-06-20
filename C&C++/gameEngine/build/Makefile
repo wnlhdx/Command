@@ -129,30 +129,6 @@ gameEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/build
 .PHONY : gameEngine/fast
 
-gameEngine.o: gameEngine.cpp.o
-.PHONY : gameEngine.o
-
-# target to build an object file
-gameEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/gameEngine.cpp.o
-.PHONY : gameEngine.cpp.o
-
-gameEngine.i: gameEngine.cpp.i
-.PHONY : gameEngine.i
-
-# target to preprocess a source file
-gameEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/gameEngine.cpp.i
-.PHONY : gameEngine.cpp.i
-
-gameEngine.s: gameEngine.cpp.s
-.PHONY : gameEngine.s
-
-# target to generate assembly for a file
-gameEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/gameEngine.cpp.s
-.PHONY : gameEngine.cpp.s
-
 graphicsAPI.o: graphicsAPI.cpp.o
 .PHONY : graphicsAPI.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gameEngine"
-	@echo "... gameEngine.o"
-	@echo "... gameEngine.i"
-	@echo "... gameEngine.s"
 	@echo "... graphicsAPI.o"
 	@echo "... graphicsAPI.i"
 	@echo "... graphicsAPI.s"

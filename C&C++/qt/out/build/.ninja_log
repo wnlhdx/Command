@@ -1,8 +1,0 @@
-# ninja log v5
-11	206	7402407006765294	mygame_autogen/timestamp	d54caef3cd7bea9e
-744	836	7402412331290823	CMakeFiles/mygame.dir/mygame_autogen/mocs_compilation.cpp.obj	53f4c95ad3965cde
-11	206	7402407006765294	mygame_autogen/mocs_compilation.cpp	d54caef3cd7bea9e
-750	2658	7402412349492164	CMakeFiles/mygame.dir/mygame.cpp.obj	de5a97ea0fde6069
-11	206	7402407006765294	D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/timestamp	d54caef3cd7bea9e
-11	206	7402407006765294	D:/work/code/command/github/C&C++/qt/out/build/mygame_autogen/mocs_compilation.cpp	d54caef3cd7bea9e
-2659	3119	7402412352961899	mygame.exe	aa90488a6280f069
