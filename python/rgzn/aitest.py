@@ -3,12 +3,13 @@ import os
 import edge_tts
 import subprocess
 import time
+import importlib
 from openai import OpenAI
 
 # 假设这是您的正确OpenAI API密钥和基础URL
 client = OpenAI(
-    api_key="YOUR_API_KEY",  # 替换为您的OpenAI API密钥
-    base_url="https://api.openai.com/v1"  # 替换为OpenAI官方基础URL
+    api_key="sk-VjSCWObgSc3EbfaJQRACXMvb33Q7th40lxF9d7Sk9aJoydQ8",  # 替换为您的OpenAI API密钥
+    base_url="https://api.chatanywhere.tech/v1"  # 替换为OpenAI官方基础URL
 )
 
 
@@ -28,9 +29,10 @@ def gpt_35_api_stream(input_message):
 
 
 def save():
-    loop = asyncio.get_event_loop_policy().get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     try:
-        loop.run_until_complete(amain())
+        asyncio.run(amain())
     finally:
         loop.close()
 
@@ -39,6 +41,7 @@ async def amain() -> None:
     """Xiaoxiao或者Xiaoyi"""
     communicate = edge_tts.Communicate(read_message, 'zh-CN-XiaoxiaoNeural')
     await communicate.save('test.mp3')
+
 
 
 def read():
@@ -53,28 +56,33 @@ def read():
 
 def read_termux():
     # 播放音频文件
-    subprocess.call('play-audio test.wav', shell=True)
+    subprocess.call('mpv test.mp3', shell=True)
 
 
 def read_windows():
     # 播放音频文件
-    from pygame import mixer
+    module = importlib.import_module("pygame")
 
-    mixer.init()
+    module.mixer.init()
     size = 0.7
-    mixer.music.set_volume(size)
-    mixer.music.load("./test.mp3")
-    mixer.music.play()
-    time.sleep(5)
+    module.mixer.music.set_volume(size)
+    module.mixer.music.load("test.mp3")
+    module.mixer.music.play()
+    # 等待播放完成
+    while module.mixer.music.get_busy():
+        time.sleep(0.1)
+    # 确保文件不再被播放器占用
+    module.mixer.music.stop()
+    module.mixer.music.load("stop.mp3")
 
 
 if __name__ == '__main__':
     read_message = "我能做些什么？"
     print(read_message)
-    read_windows()
-    # while True:
-    #     message = input("")
-    #     if message.lower() == "退出":
-    #         break
-    #     read_message = gpt_35_api_stream(message)
-    #     read()
+    read()
+    while True:
+        message = input("")
+        if message.lower() == "退出":
+            break
+        read_message = gpt_35_api_stream(message)
+        read()
