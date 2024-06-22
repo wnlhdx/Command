@@ -1,5 +1,8 @@
 import asyncio
+import contextlib
 import os
+import sys
+
 import edge_tts
 import subprocess
 import time
@@ -43,7 +46,6 @@ async def amain() -> None:
     await communicate.save('test.mp3')
 
 
-
 def read():
     save()
     if os.name == 'posix':
@@ -62,7 +64,6 @@ def read_termux():
 def read_windows():
     # 播放音频文件
     module = importlib.import_module("pygame")
-
     module.mixer.init()
     size = 0.7
     module.mixer.music.set_volume(size)
@@ -72,12 +73,11 @@ def read_windows():
     while module.mixer.music.get_busy():
         time.sleep(0.1)
     # 确保文件不再被播放器占用
-    module.mixer.music.stop()
-    module.mixer.music.load("stop.mp3")
+    module.mixer.music.unload()
 
 
 if __name__ == '__main__':
-    read_message = "我能做些什么？"
+    read_message = "初始化中，请问我能做些什么？"
     print(read_message)
     read()
     while True:
