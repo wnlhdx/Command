@@ -1,9 +1,7 @@
 <html>
-  <head>
-    <title>Bad Request</title>
-  </head>
-  <body>
-    <h1><p>Bad Request</p></h1>
-    Request Line is too large (4651 &gt; 4094)
-  </body>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.21.3</center>
+</body>
 </html>

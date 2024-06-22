@@ -1,5 +1,4 @@
 import os
-import json
 import subprocess
 
 def list_files_termux(directory):
