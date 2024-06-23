@@ -1,1 +1,0 @@
-/data/data/com.termux/files/home/Android/Sdk/cmake/3.22.1/bin/cmake[1]: syntax error: unexpected ')'
