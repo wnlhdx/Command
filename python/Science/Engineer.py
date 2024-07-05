@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.constants import g
 from sympy import symbols, Eq, solve
 
 # 定义木块的尺寸
