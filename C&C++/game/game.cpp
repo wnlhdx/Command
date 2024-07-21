@@ -1,123 +1,135 @@
 #include <iostream>
-#include <thread> // 用于 std::this_thread::sleep_for
-#include <chrono> // 用于 std::chrono::milliseconds
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <chrono>
+#include <thread>
 
-// 定义地图类
-class Map {
+#if defined(_WIN32) || defined(_WIN64)
+#include <conio.h> // For _kbhit() and _getch() on Windows
+#else
+#include <termios.h>
+#include <unistd.h>
+
+// Function to get a single character from terminal without waiting for Enter
+char getch() {
+    struct termios oldt, newt;
+    char ch;
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    ch = getchar();
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    return ch;
+}
+#endif
+
+// Define the dimensions of the board
+const int WIDTH = 11;
+const int HEIGHT = 15;
+const int START_POS = WIDTH / 2;
+
+class Bagatelle {
 public:
-    static const int WIDTH = 11;
-    static const int HEIGHT = 11;
-    char grid[HEIGHT][WIDTH];
+    Bagatelle();
+    void drawBoard();
+    void releaseBall();
+    void run();
 
-    Map() {
-        // 初始化地图
-        for (int y = 0; y < HEIGHT; ++y) {
-            for (int x = 0; x < WIDTH; ++x) {
-                grid[y][x] = (x == 0 || x == WIDTH - 1 || y == 0 || y == HEIGHT - 1) ? '#' : '.';
-            }
-        }
-    }
-
-    void Draw() {
-        // 绘制地图
-        for (int y = 0; y < HEIGHT; ++y) {
-            for (int x = 0; x < WIDTH; ++x) {
-                std::cout << grid[y][x];
-            }
-            std::cout << std::endl;
-        }
-    }
+private:
+    std::vector<std::vector<char>> board;
+    int score;
+    int power;
+    void initializeBoard();
 };
 
-// 定义玩家类
-class Player {
-public:
-    int x;
-    int y;
-
-    Player(Map& map) : x(1), y(1) {
-        // 将玩家放置在地图上
-        map.grid[y][x] = 'P';
-    }
-
-    void Move(char key, Map& map) {
-        // 保存玩家当前的位置
-        int prevX = x;
-        int prevY = y;
-
-        // 根据按键移动玩家
-        switch (key) {
-        case 'w': // 上
-        case 'W':
-            y--;
-            break;
-        case 's': // 下
-        case 'S':
-            y++;
-            break;
-        case 'a': // 左
-        case 'A':
-            x--;
-            break;
-        case 'd': // 右
-        case 'D':
-            x++;
-            break;
-        default:
-            return; // 如果不是移动键，则不进行任何操作
-        }
-
-        // 检查移动后的位置是否有效
-        if (map.grid[y][x] != '#') {
-            // 移动玩家
-            map.grid[prevY][prevX] = '.'; // 清除原来的位置
-            map.grid[y][x] = 'P'; // 设置新的位置
-        }
-        else {
-            // 如果移动到的位置是墙，则取消移动
-            x = prevX;
-            y = prevY;
-        }
-    }
-};
-// 跨平台的清屏方法
-void clearScreen() {
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
+Bagatelle::Bagatelle() : board(HEIGHT, std::vector<char>(WIDTH, ' ')), score(0), power(1) {
+    initializeBoard();
 }
 
-// 游戏主循环
-void gameLoop(Map& map, Player& player) {
-    bool running = true;
-    while (running) {
-        // 清屏
-        clearScreen();
-
-        // 绘制地图
-        map.Draw();
-
-        // 处理玩家输入
-        char key;
-        std::cin.get(key); // 等待输入
-        player.Move(key, map);
-
-        // 检查是否退出
-        if (key == 'q' || key == 'Q') {
-            running = false;
+void Bagatelle::initializeBoard() {
+    for (int y = 0; y < HEIGHT; ++y) {
+        for (int x = 0; x < WIDTH; ++x) {
+            if (y % 2 == 0 && x % 2 == 0) {
+                board[y][x] = 'O'; // Pegs
+            }
+            else {
+                board[y][x] = ' ';
+            }
         }
-
-        // 使用双缓冲技术
-        fflush(stdout);
-        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 等待100毫秒以降低刷新率
     }
+    // Add pockets at the bottom
+    for (int x = 1; x < WIDTH; x += 2) {
+        board[HEIGHT - 1][x] = 'U'; // Pockets
+    }
+}
+
+void Bagatelle::drawBoard() {
+    for (const auto& row : board) {
+        for (const auto& cell : row) {
+            std::cout << cell;
+        }
+        std::cout << '\n';
+    }
+    std::cout << "Score: " << score << "\n";
+    std::cout << "Power: " << power << "\n";
+}
+
+void Bagatelle::releaseBall() {
+    int x = START_POS;
+    int y = 0;
+    while (y < HEIGHT - 1) {
+        board[y][x] = ' ';
+        y++;
+        if (board[y][x] == 'O') {
+            // Ball hits a peg
+            x += (std::rand() % 2 == 0) ? -1 : 1;
+        }
+        if (x < 0) x = 0;
+        if (x >= WIDTH) x = WIDTH - 1;
+        board[y][x] = 'B';
+        std::this_thread::sleep_for(std::chrono::milliseconds(100 / power));
+    }
+    // Check where the ball lands
+    if (board[y][x] == 'U') {
+        score += 10 * power;
+    }
+    board[y][x] = ' ';
+}
+
+void Bagatelle::run() {
+    std::srand(std::time(nullptr));
+    char choice;
+    do {
+        system("clear"); // Clear the screen
+        drawBoard();
+        std::cout << "Press 'w' to increase power, 's' to decrease power, 'r' to release the ball, 'q' to quit.\n";
+#if defined(_WIN32) || defined(_WIN64)
+        choice = _getch();
+#else
+        choice = getch();
+#endif
+        switch (choice) {
+        case 'w':
+            if (power < 10) power++;
+            break;
+        case 's':
+            if (power > 1) power--;
+            break;
+        case 'r':
+            releaseBall();
+            break;
+        case 'q':
+            break;
+        default:
+            break;
+        }
+    } while (choice != 'q');
 }
 
 int main() {
-    Map map;
-    Player player(map);
-    gameLoop(map, player);
+    Bagatelle game;
+    game.run();
     return 0;
 }

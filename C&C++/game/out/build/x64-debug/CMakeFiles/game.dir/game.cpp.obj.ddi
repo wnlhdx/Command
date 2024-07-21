@@ -5,7 +5,7 @@
         {
             "primary-output": "CMakeFiles\\game.dir\\game.cpp.obj",
             "outputs": [
-                "D:\\work\\code\\command\\github\\C&C++\\game\\out\\build\\x64-debug\\vc140.pdb",
+                "D:\\work\\code\\Command\\C&C++\\game\\out\\build\\x64-debug\\vc140.pdb",
                 "CMakeFiles\\game.dir\\game.cpp.obj.ddi"
             ],
             "requires": []

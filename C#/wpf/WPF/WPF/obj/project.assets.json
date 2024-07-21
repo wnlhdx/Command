@@ -8,24 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\李浩\\.nuget\\packages\\": {},
-    "D:\\software\\study\\develop\\ide\\visualstudio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\米\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\code\\command\\github\\C#\\wpf\\WPF\\WPF\\WPF.csproj",
+      "projectUniqueName": "D:\\work\\code\\Command\\C#\\wpf\\WPF\\WPF\\WPF.csproj",
       "projectName": "WPF",
-      "projectPath": "D:\\work\\code\\command\\github\\C#\\wpf\\WPF\\WPF\\WPF.csproj",
-      "packagesPath": "C:\\Users\\李浩\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\code\\command\\github\\C#\\wpf\\WPF\\WPF\\obj\\",
+      "projectPath": "D:\\work\\code\\Command\\C#\\wpf\\WPF\\WPF\\WPF.csproj",
+      "packagesPath": "C:\\Users\\米\\.nuget\\packages\\",
+      "outputPath": "D:\\work\\code\\Command\\C#\\wpf\\WPF\\WPF\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\software\\study\\develop\\ide\\visualstudio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\李浩\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\米\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
