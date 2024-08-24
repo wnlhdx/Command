@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/src/main/cpp/CMakeLists.txt

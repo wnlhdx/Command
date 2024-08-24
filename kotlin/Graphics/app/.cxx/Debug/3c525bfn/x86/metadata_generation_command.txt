@@ -1,0 +1,19 @@
+                        -H/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/src/main/cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=34
+-DANDROID_PLATFORM=android-34
+-DANDROID_ABI=x86
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DANDROID_NDK=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125
+-DCMAKE_ANDROID_NDK=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125
+-DCMAKE_TOOLCHAIN_FILE=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/data/data/com.termux/files/usr/bin/ninja
+-DCMAKE_CXX_FLAGS=-std=c++17
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/build/intermediates/cxx/Debug/3c525bfn/obj/x86
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/build/intermediates/cxx/Debug/3c525bfn/obj/x86
+-DCMAKE_BUILD_TYPE=Debug
+-B/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/Debug/3c525bfn/x86
+-GNinja
+                        Build command args: []
+                        Version: 2

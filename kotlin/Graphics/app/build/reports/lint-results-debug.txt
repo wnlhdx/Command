@@ -1,0 +1,14 @@
+/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/src/main/AndroidManifest.xml:14: Warning: Unnecessary; SDK_INT is always >= 31 [ObsoleteSdkInt]
+        tools:targetApi="31">
+        ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+0 errors, 1 warnings

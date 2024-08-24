@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/build/intermediates/cxx/Debug/3c525bfn/obj/arm64-v8a

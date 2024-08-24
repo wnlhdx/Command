@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/data/data/com.termux/files/usr/bin/ninja",
+      "-C",
+      "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/data/data/com.termux/files/usr/bin/ninja",
+    "-C",
+    "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "graphics::@6890427a1f51a3e7e1df": {
+      "artifactName": "graphics",
+      "abi": "x86_64",
+      "output": "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/build/intermediates/cxx/RelWithDebInfo/31236xu6/obj/x86_64/libgraphics.so",
+      "runtimeFiles": []
+    }
+  }
+}

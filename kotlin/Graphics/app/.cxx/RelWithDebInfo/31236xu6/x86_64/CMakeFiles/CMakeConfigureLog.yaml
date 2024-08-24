@@ -1,0 +1,397 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      The target system is: Android - 1 - x86_64
+      The host system is: Android - 34 - aarch64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang 
+      Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security
+      Id flags: -c;--target=x86_64-none-linux-android34 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        /data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++ 
+      Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security;-std=c++17
+      Id flags: -c;--target=x86_64-none-linux-android34 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is Clang, found in:
+        /data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt"
+      binary: "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_PIE: "TRUE"
+      ANDROID_PLATFORM: "android-34"
+      ANDROID_STL: "c++_static"
+      ANDROID_TOOLCHAIN: "clang"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/data/data/com.termux/files/usr/bin/clang-scan-deps"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android34"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android34"
+      CMAKE_C_FLAGS: "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat "
+      CMAKE_C_FLAGS_DEBUG: "-fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  "
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt'
+        
+        Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_43408
+        [1/2] /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat   -fPIE   -v -MD -MT CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -c /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Android (dev, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+        Target: x86_64-none-linux-android34
+        Thread model: posix
+        InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin
+         (in-process)
+         "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang" -cc1 -triple x86_64-none-linux-android34 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt -resource-dir /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17 -dependency-file CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include -Wformat -fdebug-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -x c /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target aarch64-unknown-linux-android28
+        ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include"
+        ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include
+        End of search list.
+        [2/2] : && /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -o cmTC_43408   && :
+        Android (dev, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+        Target: x86_64-none-linux-android34
+        Thread model: posix
+        InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin
+         "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld" --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -pie -z now -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_43408 /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include]
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android]
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include]
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android]
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+        implicit include dirs: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt']
+        ignore line: []
+        ignore line: [Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_43408]
+        ignore line: [[1/2] /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat   -fPIE   -v -MD -MT CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -c /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Android (dev  +pgo  +bolt  +lto  -mlgo  based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+        ignore line: [Target: x86_64-none-linux-android34]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang" -cc1 -triple x86_64-none-linux-android34 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt -resource-dir /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17 -dependency-file CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include -Wformat -fdebug-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-7cthKt -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -x c /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target aarch64-unknown-linux-android28]
+        ignore line: [ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -static-libstdc++ -Wl --build-id=sha1 -Wl --no-undefined-version -Wl --fatal-warnings -Wl --no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o -o cmTC_43408   && :]
+        ignore line: [Android (dev  +pgo  +bolt  +lto  -mlgo  based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+        ignore line: [Target: x86_64-none-linux-android34]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin]
+        link line: [ "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld" --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -pie -z now -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_43408 /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld] ==> ignore
+          arg [--sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker64] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_43408] ==> ignore
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o] ==> obj [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib]
+          arg [--build-id=sha1] ==> ignore
+          arg [--no-undefined-version] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [--no-undefined] ==> ignore
+          arg [CMakeFiles/cmTC_43408.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [-lc] ==> lib [c]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o] ==> obj [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o]
+        linker tool for 'C': /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld
+        remove lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+        remove lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib]
+        implicit libs: [-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+        implicit objs: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o]
+        implicit dirs: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Running the C compiler's linker: "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld" "-v"
+      LLD 17.0.2 (compatible with GNU linkers)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS"
+      binary: "/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS"
+    cmakeVariables:
+      ANDROID_ABI: "x86_64"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_PIE: "TRUE"
+      ANDROID_PLATFORM: "android-34"
+      ANDROID_STL: "c++_static"
+      ANDROID_TOOLCHAIN: "clang"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/data/data/com.termux/files/usr/bin/clang-scan-deps"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-none-linux-android34"
+      CMAKE_CXX_FLAGS: "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat  -std=c++17"
+      CMAKE_CXX_FLAGS_DEBUG: "-fno-limit-debug-info "
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_C_COMPILER_TARGET: "x86_64-none-linux-android34"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  "
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS'
+        
+        Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_3a1bd
+        [1/2] /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++ --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat  -std=c++17  -fPIE   -v -MD -MT CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -c /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Android (dev, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+        Target: x86_64-none-linux-android34
+        Thread model: posix
+        InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin
+         (in-process)
+         "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++" -cc1 -triple x86_64-none-linux-android34 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS -resource-dir /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17 -dependency-file CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1 -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -x c++ /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target aarch64-unknown-linux-android28
+        ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include"
+        ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android
+         /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include
+        End of search list.
+        [2/2] : && /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++ --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat  -std=c++17 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3a1bd   && :
+        Android (dev, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+        Target: x86_64-none-linux-android34
+        Thread model: posix
+        InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin
+         "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld" --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -pie -z now -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_3a1bd /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1]
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include]
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android]
+          add: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1]
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include]
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android]
+        collapse include dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+        implicit include dirs: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS']
+        ignore line: []
+        ignore line: [Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_3a1bd]
+        ignore line: [[1/2] /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++ --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat  -std=c++17  -fPIE   -v -MD -MT CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -c /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Android (dev  +pgo  +bolt  +lto  -mlgo  based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+        ignore line: [Target: x86_64-none-linux-android34]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++" -cc1 -triple x86_64-none-linux-android34 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS -resource-dir /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17 -dependency-file CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1 -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include -internal-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include -internal-externc-isystem /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86_64/CMakeFiles/CMakeScratch/TryCompile-9AM0gS -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -x c++ /data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target aarch64-unknown-linux-android28]
+        ignore line: [ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/c++/v1]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/include]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include/x86_64-linux-android]
+        ignore line: [ /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/clang++ --target=x86_64-none-linux-android34 --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat  -std=c++17 -static-libstdc++ -Wl --build-id=sha1 -Wl --no-undefined-version -Wl --fatal-warnings -Wl --no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3a1bd   && :]
+        ignore line: [Android (dev  +pgo  +bolt  +lto  -mlgo  based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+        ignore line: [Target: x86_64-none-linux-android34]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin]
+        link line: [ "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld" --sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot -pie -z now -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_3a1bd /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34 -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android -L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld] ==> ignore
+          arg [--sysroot=/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker64] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_3a1bd] ==> ignore
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o] ==> obj [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android]
+          arg [-L/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib] ==> dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib]
+          arg [--build-id=sha1] ==> ignore
+          arg [--no-undefined-version] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [--no-undefined] ==> ignore
+          arg [CMakeFiles/cmTC_3a1bd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lc++] ==> lib [c++]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [-lc] ==> lib [c]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o] ==> obj [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o]
+        linker tool for 'CXX': /data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld
+        remove lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+        remove lib [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/libclang_rt.builtins-x86_64-android.a]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android]
+        collapse library dir [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib] ==> [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib]
+        implicit libs: [c++;m;-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+        implicit objs: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtbegin_dynamic.o;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34/crtend_android.o]
+        implicit dirs: [/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/lib/clang/17/lib/linux/x86_64;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android/34;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib/x86_64-linux-android;/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/data/data/com.termux/files/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:12 (project)"
+    message: |
+      Running the CXX compiler's linker: "/data/data/com.termux/files/home/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/linux-aarch64/bin/ld.lld" "-v"
+      LLD 17.0.2 (compatible with GNU linkers)
+...

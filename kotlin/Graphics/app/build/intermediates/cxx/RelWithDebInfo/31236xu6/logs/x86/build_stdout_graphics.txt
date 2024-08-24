@@ -1,0 +1,3 @@
+ninja: Entering directory `/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/x86'
+[1/2] Building CXX object CMakeFiles/graphics.dir/native-lib.cpp.o
+[2/2] Linking CXX shared library /data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/build/intermediates/cxx/RelWithDebInfo/31236xu6/obj/x86/libgraphics.so
