@@ -1,19 +1,7 @@
 # ninja log v5
-15	502	7431964966483684	CMakeFiles/game.dir/game.cpp.obj.ddi	d5e18e7423a313ca
-505	541	7431964966483684	CMakeFiles/game.dir/CXX.dd	cbb730ab4d9c1e26
-505	541	7431964966483684	D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/game.dir/CXXModules.json	cbb730ab4d9c1e26
-2028	2405	7431961913691189	game.exe	715ca6715135e297
-505	541	7431964966483684	CMakeFiles/game.dir/game.cpp.obj.modmap	cbb730ab4d9c1e26
-238	2028	7431961911473934	CMakeFiles/game.dir/game.cpp.obj	f38636a94dd4ac01
-35	265	7432449160273021	CMakeFiles/game.dir/game.cpp.obj.ddi	d5e18e7423a313ca
-267	363	7432449160273021	CMakeFiles/game.dir/CXX.dd	cbb730ab4d9c1e26
-267	363	7432449160273021	D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/game.dir/CXXModules.json	cbb730ab4d9c1e26
-267	363	7432449160273021	CMakeFiles/game.dir/game.cpp.obj.modmap	cbb730ab4d9c1e26
-368	2285	7432449180441154	CMakeFiles/game.dir/game.cpp.obj	f38636a94dd4ac01
-2285	4420	7432449198902104	game.exe	715ca6715135e297
-5	468	7432680711520780	CMakeFiles/game.dir/game.cpp.obj.ddi	d5e18e7423a313ca
-471	533	7432680711520780	CMakeFiles/game.dir/CXX.dd	cbb730ab4d9c1e26
-471	533	7432680711520780	D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/game.dir/CXXModules.json	cbb730ab4d9c1e26
-471	533	7432680711520780	CMakeFiles/game.dir/game.cpp.obj.modmap	cbb730ab4d9c1e26
-535	2785	7432680737047849	CMakeFiles/game.dir/game.cpp.obj	f38636a94dd4ac01
-2785	5145	7432680758784585	game.exe	715ca6715135e297
+17	456	7475007322886822	CMakeFiles/game.dir/game.cpp.obj.ddi	a79882ef22a29812
+458	491	7475007322886822	CMakeFiles/game.dir/CXX.dd	82c97105b31442f8
+458	491	7475007322886822	D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/game.dir/CXXModules.json	82c97105b31442f8
+2275	2623	7475007343762351	game.exe	68a868c9a48b3938
+458	491	7475007322886822	CMakeFiles/game.dir/game.cpp.obj.modmap	82c97105b31442f8
+492	2275	7475007341059390	CMakeFiles/game.dir/game.cpp.obj	caf8d659033a5317

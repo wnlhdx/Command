@@ -13,8 +13,8 @@
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/cl.exe",
-				"version" : "19.40.33811.0"
+				"path" : "D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe",
+				"version" : "19.41.34120.0"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -34,8 +34,8 @@
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/cl.exe",
-				"version" : "19.40.33811.0"
+				"path" : "D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe",
+				"version" : "19.41.34120.0"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 

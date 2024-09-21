@@ -8,19 +8,19 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "D:/soft/Cmake/bin/cmake.exe",
-			"cpack" : "D:/soft/Cmake/bin/cpack.exe",
-			"ctest" : "D:/soft/Cmake/bin/ctest.exe",
-			"root" : "D:/soft/Cmake/share/cmake-3.30"
+			"cmake" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe",
+			"cpack" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe",
+			"ctest" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe",
+			"root" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 30,
-			"patch" : 0,
-			"string" : "3.30.0",
-			"suffix" : ""
+			"minor" : 29,
+			"patch" : 5,
+			"string" : "3.29.5-msvc4",
+			"suffix" : "msvc4"
 		}
 	},
 	"objects" : 
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-a384a5029d1915b4117c.json",
+			"jsonFile" : "cache-v2-62df30632891bffab4cd.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,16 +44,16 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-97780af12ceaa701d4a0.json",
+			"jsonFile" : "cmakeFiles-v1-3ca9233612724512656e.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
 				"major" : 1,
-				"minor" : 1
+				"minor" : 0
 			}
 		},
 		{
-			"jsonFile" : "toolchains-v1-ed49bcc8b5d211d90a1c.json",
+			"jsonFile" : "toolchains-v1-e1515e608986eca7bfc7.json",
 			"kind" : "toolchains",
 			"version" : 
 			{
@@ -90,7 +90,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-a384a5029d1915b4117c.json",
+						"jsonFile" : "cache-v2-62df30632891bffab4cd.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -99,12 +99,12 @@
 						}
 					},
 					{
-						"jsonFile" : "cmakeFiles-v1-97780af12ceaa701d4a0.json",
+						"jsonFile" : "cmakeFiles-v1-3ca9233612724512656e.json",
 						"kind" : "cmakeFiles",
 						"version" : 
 						{
 							"major" : 1,
-							"minor" : 1
+							"minor" : 0
 						}
 					},
 					{
@@ -117,7 +117,7 @@
 						}
 					},
 					{
-						"jsonFile" : "toolchains-v1-ed49bcc8b5d211d90a1c.json",
+						"jsonFile" : "toolchains-v1-e1515e608986eca7bfc7.json",
 						"kind" : "toolchains",
 						"version" : 
 						{

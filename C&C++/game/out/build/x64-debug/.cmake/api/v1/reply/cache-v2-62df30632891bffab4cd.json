@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/lib.exe"
+			"value" : "D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lib.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -63,7 +63,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "30"
+			"value" : "29"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -87,7 +87,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/soft/Cmake/bin/cmake.exe"
+			"value" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -99,7 +99,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/soft/Cmake/bin/cpack.exe"
+			"value" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -111,7 +111,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/soft/Cmake/bin/ctest.exe"
+			"value" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -338,18 +338,6 @@
 			"value" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib"
 		},
 		{
-			"name" : "CMAKE_EDIT_COMMAND",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to cache edit program executable."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "D:/soft/Cmake/bin/cmake-gui.exe"
-		},
-		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
 			"properties" : 
 			[
@@ -567,7 +555,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe"
+			"value" : "D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -579,7 +567,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "D:\\SOFT\\VS\\COMMUNITY\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe"
+			"value" : "D:\\SOFT\\VS\\IDE\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -867,7 +855,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/soft/Cmake/share/cmake-3.30"
+			"value" : "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",

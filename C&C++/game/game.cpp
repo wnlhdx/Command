@@ -1,135 +1,134 @@
 #include <iostream>
+#include <string>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <chrono>
-#include <thread>
+#include <conio.h> // 用于_getch()在Windows上捕获按键，需要MSVC编译器
 
-#if defined(_WIN32) || defined(_WIN64)
-#include <conio.h> // For _kbhit() and _getch() on Windows
+#ifdef _WIN32
+#include <windows.h>
 #else
-#include <termios.h>
 #include <unistd.h>
-
-// Function to get a single character from terminal without waiting for Enter
-char getch() {
-    struct termios oldt, newt;
-    char ch;
-    tcgetattr(STDIN_FILENO, &oldt);
-    newt = oldt;
-    newt.c_lflag &= ~(ICANON | ECHO);
-    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-    ch = getchar();
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-    return ch;
-}
 #endif
 
-// Define the dimensions of the board
-const int WIDTH = 11;
-const int HEIGHT = 15;
-const int START_POS = WIDTH / 2;
+const int COURT_WIDTH = 50;
+const int COURT_HEIGHT = 15;
+const int PADDLE_HEIGHT = 3;
 
-class Bagatelle {
-public:
-    Bagatelle();
-    void drawBoard();
-    void releaseBall();
-    void run();
+int ball_x = COURT_WIDTH / 2;
+int ball_y = COURT_HEIGHT / 2;
+int ball_vx = 1;
+int ball_vy = 1;
 
-private:
-    std::vector<std::vector<char>> board;
-    int score;
-    int power;
-    void initializeBoard();
-};
+int paddle1_y = COURT_HEIGHT / 2 - PADDLE_HEIGHT;
+int paddle2_y = COURT_HEIGHT / 2 - PADDLE_HEIGHT;
 
-Bagatelle::Bagatelle() : board(HEIGHT, std::vector<char>(WIDTH, ' ')), score(0), power(1) {
-    initializeBoard();
+std::vector<std::string> buffer(COURT_HEIGHT, std::string(COURT_WIDTH, ' '));
+
+void clearScreen() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }
 
-void Bagatelle::initializeBoard() {
-    for (int y = 0; y < HEIGHT; ++y) {
-        for (int x = 0; x < WIDTH; ++x) {
-            if (y % 2 == 0 && x % 2 == 0) {
-                board[y][x] = 'O'; // Pegs
+void drawCourt() {
+    for (int y = 0; y < COURT_HEIGHT; ++y) {
+        for (int x = 0; x < COURT_WIDTH; ++x) {
+            if (x == 0 || x == COURT_WIDTH - 1) {
+                buffer[y][x] = '|';
+            }
+            else if (y == ball_y && x == ball_x) {
+                buffer[y][x] = 'O';
+            }
+            else if (x == 1) {
+                if (y >= paddle1_y && y <= paddle1_y + PADDLE_HEIGHT-1) {
+                    buffer[y][x] = '|';
+                }
+                else {
+                    buffer[y][x] = ' ';
+                }
+            }
+            else if (x == COURT_WIDTH - 2){
+                if (y >= paddle2_y && y <= paddle2_y + PADDLE_HEIGHT-1) {
+                    buffer[y][x] = '|';
+                }
+                else {
+                    buffer[y][x] = ' ';
+                }
             }
             else {
-                board[y][x] = ' ';
+                buffer[y][x] = ' ';
             }
         }
     }
-    // Add pockets at the bottom
-    for (int x = 1; x < WIDTH; x += 2) {
-        board[HEIGHT - 1][x] = 'U'; // Pockets
-    }
+    
 }
 
-void Bagatelle::drawBoard() {
-    for (const auto& row : board) {
-        for (const auto& cell : row) {
-            std::cout << cell;
+void render(int score1,int score2) {
+    for (const auto& line : buffer) {
+        std::cout << line << std::endl;
+    }
+    std::cout << "score1:" << score1 << std::endl;
+    std::cout << "score2:" << score2 << std::endl;
+}
+
+void gameLoop() {
+    bool running = true;
+    int score1 = 0;
+    int score2 = 0;
+    while (running) {
+        drawCourt();
+        clearScreen();
+        render(score1, score2);
+        // Move the ball
+        ball_x += ball_vx;
+        ball_y += ball_vy;
+
+        // Collision detection for ball
+        if (ball_x <= 1 && (ball_y >= paddle1_y && ball_y <= paddle1_y + PADDLE_HEIGHT - 1)) {
+            ball_vx = -ball_vx;
         }
-        std::cout << '\n';
-    }
-    std::cout << "Score: " << score << "\n";
-    std::cout << "Power: " << power << "\n";
-}
-
-void Bagatelle::releaseBall() {
-    int x = START_POS;
-    int y = 0;
-    while (y < HEIGHT - 1) {
-        board[y][x] = ' ';
-        y++;
-        if (board[y][x] == 'O') {
-            // Ball hits a peg
-            x += (std::rand() % 2 == 0) ? -1 : 1;
+        else if (ball_x >= COURT_WIDTH - 3 && (ball_y >= paddle2_y && ball_y <= paddle2_y + PADDLE_HEIGHT - 1)) {
+            ball_vx = -ball_vx;
         }
-        if (x < 0) x = 0;
-        if (x >= WIDTH) x = WIDTH - 1;
-        board[y][x] = 'B';
-        std::this_thread::sleep_for(std::chrono::milliseconds(100 / power));
-    }
-    // Check where the ball lands
-    if (board[y][x] == 'U') {
-        score += 10 * power;
-    }
-    board[y][x] = ' ';
-}
+        if (ball_x <= 0 || ball_x >= COURT_WIDTH - 1) {
+            if (ball_x <= 0) {
+                score2 += 1;
+            }
+            else {
+                score1 += 1;
+            }
+            ball_x = COURT_WIDTH / 2;
+            ball_y = COURT_HEIGHT / 2;
+        }
+        if (ball_y <= 0 || ball_y >= COURT_HEIGHT - 1) {
+            ball_vy = -ball_vy;
+        }
 
-void Bagatelle::run() {
-    std::srand(std::time(nullptr));
-    char choice;
-    do {
-        system("clear"); // Clear the screen
-        drawBoard();
-        std::cout << "Press 'w' to increase power, 's' to decrease power, 'r' to release the ball, 'q' to quit.\n";
-#if defined(_WIN32) || defined(_WIN64)
-        choice = _getch();
+        // Handle paddle controls
+        if (_kbhit()) {
+            char ch = _getch();
+            if (ch == 'w' && paddle1_y > 0) paddle1_y--;
+            if (ch == 's' && paddle1_y < COURT_HEIGHT - PADDLE_HEIGHT) paddle1_y++;
+            if (ch == 'i' && paddle2_y > 0) paddle2_y--;
+            if (ch == 'k' && paddle2_y < COURT_HEIGHT - PADDLE_HEIGHT) paddle2_y++;
+            if (ch == 'q') running = false;
+        }
+
+        // Control game speed
+#ifdef _WIN32
+        Sleep(100);
 #else
-        choice = getch();
+        usleep(100000);
 #endif
-        switch (choice) {
-        case 'w':
-            if (power < 10) power++;
-            break;
-        case 's':
-            if (power > 1) power--;
-            break;
-        case 'r':
-            releaseBall();
-            break;
-        case 'q':
-            break;
-        default:
-            break;
-        }
-    } while (choice != 'q');
+    }
 }
 
 int main() {
-    Bagatelle game;
-    game.run();
+    std::cout << "Tennis for Two (Text Version with Controls)\n";
+    std::cout << "Controls: W/S for left paddle, I/K for right paddle. Press 'q' to quit.\n";
+
+    gameLoop();
+
     return 0;
 }

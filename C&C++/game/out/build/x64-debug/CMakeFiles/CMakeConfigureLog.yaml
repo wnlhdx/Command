@@ -4,30 +4,30 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
       - "CMakeLists.txt:14 (project)"
     message: |
       The system is: Windows - 10.0.22631 - AMD64
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:14 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/cl.exe 
+      Compiler: D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.40.33811 版
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.41.34120 版
       版权所有(C) Microsoft Corporation。保留所有权利。
       
       CMakeCCompilerId.c
-      Microsoft (R) Incremental Linker Version 14.40.33811.0
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       /out:CMakeCCompilerId.exe 
@@ -39,14 +39,14 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
       The C compiler identification is MSVC, found in:
-        D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/3.30.0/CompilerIdC/CMakeCCompilerId.exe
+        D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1243 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:14 (project)"
     message: |
       Detecting C compiler /showIncludes prefix:
@@ -57,23 +57,23 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:14 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/cl.exe 
+      Compiler: D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.40.33811 版
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.41.34120 版
       版权所有(C) Microsoft Corporation。保留所有权利。
       
       CMakeCXXCompilerId.cpp
-      Microsoft (R) Incremental Linker Version 14.40.33811.0
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       /out:CMakeCXXCompilerId.exe 
@@ -85,14 +85,14 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
       
       The CXX compiler identification is MSVC, found in:
-        D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/3.30.0/CompilerIdCXX/CMakeCXXCompilerId.exe
+        D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CMakeCXXCompilerId.exe
       
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1243 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:14 (project)"
     message: |
       Detecting CXX compiler /showIncludes prefix:
@@ -103,14 +103,14 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:14 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-4nqwqx"
-      binary: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-4nqwqx"
+      source: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-lhm636"
+      binary: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-lhm636"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -120,24 +120,24 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-4nqwqx'
+        Change Dir: 'D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-lhm636'
         
-        Run Build Command(s): D:\\SOFT\\VS\\COMMUNITY\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe -v cmTC_001b8
-        [1/2] D:\\soft\\vs\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_001b8.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_001b8.dir\\ /FS -c D:\\soft\\Cmake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\soft\\Cmake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_001b8.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\soft\\vs\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_001b8.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_001b8.exe /implib:cmTC_001b8.lib /pdb:cmTC_001b8.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): D:\\SOFT\\VS\\IDE\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe -v cmTC_77960
+        [1/2] D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_77960.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_77960.dir\\ /FS -c D:\\soft\\VS\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\soft\\VS\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_77960.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_77960.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_77960.exe /implib:cmTC_77960.lib /pdb:cmTC_77960.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:14 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe
+        linker tool for 'C': D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -147,25 +147,25 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:14 (project)"
     message: |
-      Running the C compiler's linker: "D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.40.33811.0
+      Running the C compiler's linker: "D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:14 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-plfwxp"
-      binary: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-plfwxp"
+      source: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-u5vyg5"
+      binary: "D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-u5vyg5"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -176,24 +176,24 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-plfwxp'
+        Change Dir: 'D:/work/code/Command/C&C++/game/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-u5vyg5'
         
-        Run Build Command(s): D:\\SOFT\\VS\\COMMUNITY\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe -v cmTC_954bf
-        [1/2] D:\\soft\\vs\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_954bf.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_954bf.dir\\ /FS -c D:\\soft\\Cmake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\soft\\Cmake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_954bf.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\soft\\vs\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_954bf.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_954bf.exe /implib:cmTC_954bf.lib /pdb:cmTC_954bf.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): D:\\SOFT\\VS\\IDE\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe -v cmTC_caf5d
+        [1/2] D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_caf5d.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_caf5d.dir\\ /FS -c D:\\soft\\VS\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\soft\\VS\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_caf5d.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_caf5d.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_caf5d.exe /implib:cmTC_caf5d.lib /pdb:cmTC_caf5d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:14 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe
+        linker tool for 'CXX': D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -203,12 +203,12 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "D:/soft/Cmake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "D:/soft/VS/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:14 (project)"
     message: |
-      Running the CXX compiler's linker: "D:/soft/vs/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.40.33811.0
+      Running the CXX compiler's linker: "D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
 ...
