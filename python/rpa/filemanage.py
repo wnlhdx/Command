@@ -39,7 +39,7 @@ def classify_files_windows(files):
     return categories
 
 # 使用示例
-def read_windows()
+def read_windows():
     directory = "YOUR_DIRECTORY_PATH"
     files = list_files_windows(directory)
     categories = classify_files_windows(files)

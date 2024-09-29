@@ -90,7 +90,7 @@ CMAKE_INSTALL_PREFIX:PATH=D:/work/code/Command/C&C++/game/out/install/x64-debug
 CMAKE_LINKER:FILEPATH=D:/soft/VS/IDE/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe
 
 //No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:UNINITIALIZED=D:\SOFT\VS\IDE\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe
+CMAKE_MAKE_PROGRAM:UNINITIALIZED=d:\soft\vs\ide\common7\ide\commonextensions\microsoft\cmake\Ninja\ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.

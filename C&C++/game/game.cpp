@@ -21,6 +21,13 @@ int ball_vy = 1;
 int paddle1_y = COURT_HEIGHT / 2 - PADDLE_HEIGHT;
 int paddle2_y = COURT_HEIGHT / 2 - PADDLE_HEIGHT;
 
+int gravity_x = COURT_WIDTH / 2; // 引力源位置
+int gravity_strength = 1; // 引力强度
+int gravity_y = COURT_HEIGHT / 2;
+
+bool special_power_active = false; // 特殊技能激活标志
+
+
 std::vector<std::string> buffer(COURT_HEIGHT, std::string(COURT_WIDTH, ' '));
 
 void clearScreen() {
@@ -56,9 +63,13 @@ void drawCourt() {
                     buffer[y][x] = ' ';
                 }
             }
+            else if (x == gravity_x && y == gravity_y) {
+                buffer[y][x] = 'G';
+            }
             else {
                 buffer[y][x] = ' ';
             }
+           
         }
     }
     
@@ -72,6 +83,15 @@ void render(int score1,int score2) {
     std::cout << "score2:" << score2 << std::endl;
 }
 
+void applyGravity() {
+    // 计算球与引力源之间的距离
+    int dx = gravity_x - ball_x;
+    // 根据距离调整球的速度
+    if (dx != 0) {
+        ball_vx += gravity_strength * (dx > 0 ? -1 : 1);
+    }
+}
+
 void gameLoop() {
     bool running = true;
     int score1 = 0;
@@ -83,6 +103,10 @@ void gameLoop() {
         // Move the ball
         ball_x += ball_vx;
         ball_y += ball_vy;
+
+        if (special_power_active) {
+            applyGravity();
+        }
 
         // Collision detection for ball
         if (ball_x <= 1 && (ball_y >= paddle1_y && ball_y <= paddle1_y + PADDLE_HEIGHT - 1)) {
@@ -105,6 +129,7 @@ void gameLoop() {
             ball_vy = -ball_vy;
         }
 
+
         // Handle paddle controls
         if (_kbhit()) {
             char ch = _getch();
@@ -112,6 +137,9 @@ void gameLoop() {
             if (ch == 's' && paddle1_y < COURT_HEIGHT - PADDLE_HEIGHT) paddle1_y++;
             if (ch == 'i' && paddle2_y > 0) paddle2_y--;
             if (ch == 'k' && paddle2_y < COURT_HEIGHT - PADDLE_HEIGHT) paddle2_y++;
+            if (ch == 'p') {
+                special_power_active = !special_power_active;
+            }
             if (ch == 'q') running = false;
         }
 

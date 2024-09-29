@@ -1,18 +1,11 @@
-import numpy
 from pettingzoo.atari import space_war_v2
 
+env = space_war_v2.parallel_env(render_mode="human")
+observations, infos = env.reset()
 
-env = space_war_v2.env(render_mode="human")
-env.reset(seed=42)
+while env.agents:
+    # this is where you would insert your policy
+    actions = {agent: env.action_space(agent).sample() for agent in env.agents}
 
-for agent in env.agent_iter():
-    observation, reward, termination, truncation, info = env.last()
-
-    if termination or truncation:
-        action = None
-    else:
-        # this is where you would insert your policy
-        action = env.action_space(agent).sample()
-
-    env.step(action)
+    observations, rewards, terminations, truncations, infos = env.step(actions)
 env.close()

@@ -567,7 +567,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "D:\\SOFT\\VS\\IDE\\COMMON7\\IDE\\COMMONEXTENSIONS\\MICROSOFT\\CMAKE\\Ninja\\ninja.exe"
+			"value" : "d:\\soft\\vs\\ide\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
