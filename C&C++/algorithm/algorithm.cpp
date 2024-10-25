@@ -1,54 +1,110 @@
 ﻿#include <iostream>
 #include <vector>
-using namespace std;
+#include <cstdlib>
+#include <ctime>
+#include <chrono>
 
-class MyArray {
-private:
-    vector<int> data; // 使用vector来实现动态数组
-
-public:
-    // 添加元素
-    void add(int value) {
-        data.push_back(value);
+// 插入排序
+void insertionSort(std::vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
     }
+}
 
-    // 获取元素
-    int get(int index) {
-        if (index >= 0 && index < data.size()) {
-            return data[index];
+// 归并排序的合并函数
+void merge(std::vector<int>& arr, int l, int m, int r) {
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    std::vector<int> L(n1), R(n2);
+
+    for (i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+
+    i = 0;
+    j = 0;
+    k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
         }
         else {
-            cout << "Index out of bounds" << endl;
-            return -1; // 或者抛出异常
+            arr[k] = R[j];
+            j++;
         }
+        k++;
     }
 
-    // 打印数组
-    void print() {
-        for (int i = 0; i < data.size(); i++) {
-            cout << data[i] << " ";
-        }
-        cout << endl;
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
     }
 
-    // 获取数组大小
-    int size() {
-        return data.size();
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
     }
-};
+}
+
+// 归并排序
+void mergeSort(std::vector<int>& arr, int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+
+// 打印数组
+void printArray(const std::vector<int>& arr) {
+    for (int num : arr) {
+        std::cout << num << " ";
+    }
+    std::cout << "\n";
+}
 
 int main() {
-    MyArray arr;
+    const int SIZE = 10000; // 数组大小
+    std::vector<int> arr(SIZE);
 
-    arr.add(1);
-    arr.add(2);
-    arr.add(3);
-    arr.add(4);
-    arr.add(5);
+    // 初始化随机数发生器
+    srand(time(NULL));
+    for (int i = 0; i < SIZE; i++) {
+        arr[i] = rand() % SIZE; // 随机数
+    }
 
-    arr.print(); // 输出: 1 2 3 4 5
+    // 复制数组用于插入排序
+    std::vector<int> arrInsertion = arr;
 
-    cout << "Element at index 2: " << arr.get(2) << endl; // 输出: Element at index 2: 3
+    // 测量插入排序时间
+    auto start = std::chrono::high_resolution_clock::now();
+    insertionSort(arrInsertion);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> insertionTime = end - start;
+    std::cout << "Insertion Sort took " << insertionTime.count() << " milliseconds.\n";
+
+    // 复制数组用于归并排序
+    std::vector<int> arrMerge = arr;
+
+    // 测量归并排序时间
+    start = std::chrono::high_resolution_clock::now();
+    mergeSort(arrMerge, 0, SIZE - 1);
+    end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> mergeTime = end - start;
+    std::cout << "Merge Sort took " << mergeTime.count() << " milliseconds.\n";
 
     return 0;
 }

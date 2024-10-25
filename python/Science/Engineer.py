@@ -1,6 +1,8 @@
 import numpy as np
 from scipy.constants import g
 from sympy import symbols, Eq, solve
+import pint
+
 
 # 定义木块的尺寸
 L, W, H = 1, 1, 1  # 假设木块的尺寸为1米
