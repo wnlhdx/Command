@@ -4,17 +4,20 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 import time
-import appium
-import pyautogui
-import os
+
 
 from webdriver_manager.chrome import ChromeDriverManager
 
+
+options = Options()
+options.headless = True
+options.add_argument("--window-size=1920,1080")
 # 初始化 WebDriver
 service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
-driver.maximize_window()
+driver = webdriver.Chrome(service=service,options=options)
+
 
 try:
     # 打开 YouTube
