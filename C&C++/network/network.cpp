@@ -1,47 +1,66 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+﻿#include <iostream>
+#include <queue>
+#include <vector>
+#include <chrono>
+#include <thread>
 
-#define ETHER_ADDR_LEN 6
-#define ETHER_HDR_LEN 14
-
-// 定义以太网帧头部结构体
-struct ether_header {
-    unsigned char ether_dhost[ETHER_ADDR_LEN]; // 目的MAC地址
-    unsigned char ether_shost[ETHER_ADDR_LEN]; // 源MAC地址
-    unsigned short ether_type; // 帧类型
+// 定义一个简单的分组结构
+struct Packet {
+    int id;             // 分组ID
+    int size;           // 分组大小（比特）
+    // 可以添加其他属性，如时间戳、目的地等
 };
 
-int main(int argc, char *argv[]) {
-    struct ether_header eh;
+// 定义链路结构
+struct Link {
+    int bandwidth;      // 链路带宽（比特/秒）
+    std::queue<Packet> buffer; // 输出缓冲区
+};
 
-    // 设置目的MAC地址
-    eh.ether_dhost[0] = 0xff;
-    eh.ether_dhost[1] = 0xff;
-    eh.ether_dhost[2] = 0xff;
-    eh.ether_dhost[3] = 0xff;
-    eh.ether_dhost[4] = 0xff;
-    eh.ether_dhost[5] = 0xff;
+// 定义路由器结构
+struct Router {
+    std::vector<Link> links; // 路由器连接的链路
+    // 可以添加其他属性，如路由表等
+};
 
-    // 设置源MAC地址
-    eh.ether_shost[0] = 0x00;
-    eh.ether_shost[1] = 0x11;
-    eh.ether_shost[2] = 0x22;
-    eh.ether_shost[3] = 0x33;
-    eh.ether_shost[4] = 0x44;
-    eh.ether_shost[5] = 0x55;
+void initializeNetwork(Router& router, int numLinks, int bandwidth) {
+    router.links.resize(numLinks);
+    for (auto& link : router.links) {
+        link.bandwidth = bandwidth;
+    }
+}
 
-    // 设置帧类型
-    eh.ether_type = htons(0x0800); // IPv4
+void sendPacket(Link& link, Packet packet) {
+    // 模拟发送分组到链路缓冲区
+    link.buffer.push(packet);
+    std::cout << "Packet " << packet.id << " sent to link with size " << packet.size << " bits.\n";
+}
 
-    // 打印以太网帧头部信息
-    printf("Destination MAC Address: %02x:%02x:%02x:%02x:%02x:%02x\n",
-           eh.ether_dhost[0], eh.ether_dhost[1], eh.ether_dhost[2],
-           eh.ether_dhost[3], eh.ether_dhost[4], eh.ether_dhost[5]);
-    printf("Source MAC Address: %02x:%02x:%02x:%02x:%02x:%02x\n",
-           eh.ether_shost[0], eh.ether_shost[1], eh.ether_shost[2],
-           eh.ether_shost[3], eh.ether_shost[4], eh.ether_shost[5]);
-    printf("Ether Type: %04x\n", ntohs(eh.ether_type));
+void processPackets(Router& router) {
+    for (auto& link : router.links) {
+        if (!link.buffer.empty()) {
+            Packet packet = link.buffer.front();
+            link.buffer.pop();
+            // 模拟存储转发传输
+            std::this_thread::sleep_for(std::chrono::milliseconds(packet.size * 1000 / link.bandwidth));
+            std::cout << "Packet " << packet.id << " processed and forwarded.\n";
+        }
+    }
+}
 
+void runSimulation() {
+    Router router;
+    initializeNetwork(router, 2, 10000000); // 初始化网络，2个链路，每个1Mbps
+
+    // 模拟发送分组
+    Packet packet1 = { 1, 1000 }; // 分组ID为1，大小为1000比特
+    sendPacket(router.links[0], packet1);
+
+    // 处理链路上的分组
+    processPackets(router);
+}
+
+int main() {
+    runSimulation();
     return 0;
 }

@@ -15,7 +15,7 @@ project ("network")
 add_executable (network "network.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET demo2 PROPERTY CXX_STANDARD 20)
+  set_property(TARGET network PROPERTY CXX_STANDARD 23)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
