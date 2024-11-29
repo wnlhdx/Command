@@ -1,2 +1,10 @@
 **/.vs/
+C&C++/*/\.vs/
+C&C++/*/out/
+**/out/
  python/rgzn/test.mp3
+*.db
+*.json
+*.sqlite
+*.exe
+*.ilk
