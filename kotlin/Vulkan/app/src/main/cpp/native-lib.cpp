@@ -1,5 +1,6 @@
 #include <jni.h>
 #include <string>
+#include <vector>
 #include <vulkan/vulkan.h>
 
 // 定义Vulkan实例和物理设备
