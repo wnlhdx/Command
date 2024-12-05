@@ -1,4 +1,0 @@
-/data/data/com.termux/files/usr/bin/ninja \
-  -C \
-  /data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/RelWithDebInfo/31236xu6/armeabi-v7a \
-  graphics

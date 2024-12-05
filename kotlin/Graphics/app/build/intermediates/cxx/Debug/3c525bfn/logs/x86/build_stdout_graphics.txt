@@ -1,2 +1,0 @@
-ninja: Entering directory `/data/data/com.termux/files/home/InnerCode/Command/kotlin/Graphics/app/.cxx/Debug/3c525bfn/x86'
-ninja: no work to do.
