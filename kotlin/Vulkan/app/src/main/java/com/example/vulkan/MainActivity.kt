@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         // Used to load the 'vulkan' library on application startup.
         init {
-            System.loadLibrary("vulkan")
+            System.loadLibrary("vulkanTest")
         }
     }
 }

@@ -1,41 +1,21 @@
-# For more information about using CMake with Android Studio, read the
-# documentation: https://d.android.com/studio/projects/add-native-code.html.
-# For more examples on how to use CMake, see https://github.com/android/ndk-samples.
-
-# Sets the minimum CMake version required for this project.
 cmake_minimum_required(VERSION 3.22.1)
 
-# Declares the project name. The project name can be accessed via ${ PROJECT_NAME},
-# Since this is the top level CMakeLists.txt, the project name is also accessible
-# with ${CMAKE_PROJECT_NAME} (both CMake variables are in-sync within the top level
-# build script scope).
-project("vulkan")
+project("vulkanTest")
 
-# Creates and names a library, sets it as either STATIC
-# or SHARED, and provides the relative paths to its source code.
-# You can define multiple libraries, and CMake builds them for you.
-# Gradle automatically packages shared libraries with your APK.
-#
-# In this top level CMakeLists.txt, ${CMAKE_PROJECT_NAME} is used to define
-# the target library name; in the sub-module's CMakeLists.txt, ${PROJECT_NAME}
-# is preferred for the same purpose.
-#
-# In order to load a library into your app from Java/Kotlin, you must call
-# System.loadLibrary() and pass the name of the library defined here;
-# for GameActivity/NativeActivity derived applications, the same library name must be
-# used in the AndroidManifest.xml file.
+# 创建并命名库
 add_library(${CMAKE_PROJECT_NAME} SHARED
-        # List C/C++ source files with relative paths to this CMakeLists.txt.
-        native-lib.cpp)
+    native-lib.cpp)
 
-find_package(Vulkan REQUIRED)
+# 设置 Vulkan 包含目录和库
+set(Vulkan_INCLUDE_DIR "/data/data/com.termux/files/usr/include/vulkan")
+find_library(VULKAN_LIBRARY NAMES vulkan libvulkan.so.1 libvulkan.so PATHS /data/data/com.termux/files/usr/lib)
 
-# Specifies libraries CMake should link to your target library. You
-# can link libraries from various origins, such as libraries defined in this
-# build script, prebuilt third-party libraries, or Android system libraries.
+
+# 包含 Vulkan 头文件目录
+include_directories(${Vulkan_INCLUDE_DIR})
+
+# 查找并链接 Vulkan 库
 target_link_libraries(${CMAKE_PROJECT_NAME}
-        # List libraries link to the target library
-	Vulkan::Vulkan
-	android
-        log)
-
+    ${VULKAN_LIBRARY}
+    android
+    log)
