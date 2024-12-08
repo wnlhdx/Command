@@ -1,4 +1,7 @@
 **/.vs/
+**/.idea/
+kotlin/Activity/.idea/
+kotlin/Vulkan/.idea/
 C&C++/*/\.vs/
 C&C++/*/out/
 **/out/
