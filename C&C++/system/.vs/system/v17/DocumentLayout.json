@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\",
+  "WorkspaceRootPath": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\testlinux.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:testlinux.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\testwin.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:testwin.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakePresets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\mysystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\.vs\\launch.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\launch.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\mysystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mysystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\testlinux.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:testlinux.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\testwin.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:testwin.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "CMakeLists.txt",
-              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\CMakeLists.txt",
-              "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACwAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-05-28T04:40:00.382Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CMakePresets.json",
-              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\CMakePresets.json",
-              "RelativeDocumentMoniker": "CMakePresets.json",
-              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\CMakePresets.json",
-              "RelativeToolTip": "CMakePresets.json",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAewBQAAAAbAAAA",
+              "Title": "launch.vs.json",
+              "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\.vs\\launch.vs.json",
+              "RelativeDocumentMoniker": ".vs\\launch.vs.json",
+              "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\.vs\\launch.vs.json",
+              "RelativeToolTip": ".vs\\launch.vs.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-28T13:50:00.653Z"
+              "WhenOpened": "2024-12-10T14:02:44.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CMakeLists.txt",
+              "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\CMakeLists.txt",
+              "RelativeDocumentMoniker": "CMakeLists.txt",
+              "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\CMakeLists.txt",
+              "RelativeToolTip": "CMakeLists.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-28T04:40:00.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CMakePresets.json",
+              "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\CMakePresets.json",
+              "RelativeDocumentMoniker": "CMakePresets.json",
+              "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\CMakePresets.json",
+              "RelativeToolTip": "CMakePresets.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-28T13:50:00.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "testlinux.asm",
-              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\testlinux.asm",
+              "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\testlinux.asm",
               "RelativeDocumentMoniker": "testlinux.asm",
-              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\testlinux.asm",
+              "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\testlinux.asm",
               "RelativeToolTip": "testlinux.asm",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-28T05:15:58.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "testwin.asm",
-              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\testwin.asm",
+              "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\testwin.asm",
               "RelativeDocumentMoniker": "testwin.asm",
-              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\testwin.asm",
+              "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\testwin.asm",
               "RelativeToolTip": "testwin.asm",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-28T05:15:12.544Z"
+              "WhenOpened": "2024-05-28T05:15:12.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "mysystem.cpp",
-              "DocumentMoniker": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\mysystem.cpp",
+              "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\mysystem.cpp",
               "RelativeDocumentMoniker": "mysystem.cpp",
-              "ToolTip": "D:\\work\\code\\command\\github\\C\u0026C\u002B\u002B\\system\\mysystem.cpp",
+              "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\system\\mysystem.cpp",
               "RelativeToolTip": "mysystem.cpp",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-28T04:40:25.889Z"
+              "WhenOpened": "2024-05-28T04:40:25.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

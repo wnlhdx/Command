@@ -11,3 +11,13 @@ C&C++/*/out/
 *.sqlite
 *.exe
 *.ilk
+*.db
+/C&C++/system/.vs
+*.sqlite
+/C&C++/system/.vs/system/v17
+/C&C++/system/out/build
+/C&C++/system/out
+/python/.idea
+/python/pc/xszl/.idea
+/python/pc/xszl/.pytest_cache
+/python/pc/xszl/__pycache__
