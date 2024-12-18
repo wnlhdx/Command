@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.29)
 
 project(qtgame)
-set(OPENGL_INCLUDE_DIR "/data/data/com.termux/files/usr/include")
-set(OPENGL_gl_LIBRARY "/data/data/com.termux/files/usr/lib/libGL.so")
+set(OpenGL_GL_PREFERENCE GLVND)
+set(Vulkan_INCLUDE_DIR "/data/data/com.termux/files/usr/include/vulkan")
+find_library(VULKAN_LIBRARY NAMES vulkan libvulkan.so.1 libvulkan.so PATHS /data/data/com.termux/files/usr/lib)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_PREFIX_PATH "/data/data/com.termux/files/usr/lib/cmake")
 set(Qt6_DIR "/data/data/com.termux/files/usr/lib/cmake/Qt6/")
@@ -27,6 +28,6 @@ add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 
 
 # Ìí¼Ó Vulkan ¿â
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Core  Qt6::Widgets)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Core  Qt6::Widgets Vulkan::Vulkan)
 
 
