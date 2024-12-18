@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\network\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\network\\network.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:network.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -22,24 +25,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "vector",
+              "DocumentMoniker": "D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "ToolTip": "D:\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\soft\\VS\\IDE\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "ViewState": "AgIAAFIHAAAAAAAAAADgv2cHAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-18T12:50:58.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "network.cpp",
               "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\network\\network.cpp",
               "RelativeDocumentMoniker": "network.cpp",
               "ToolTip": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\network\\network.cpp",
               "RelativeToolTip": "network.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAYwGIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-28T05:27:29.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\network\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
@@ -51,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CMakePresets.json",
               "DocumentMoniker": "D:\\work\\code\\Command\\C\u0026C\u002B\u002B\\network\\CMakePresets.json",
               "RelativeDocumentMoniker": "CMakePresets.json",
@@ -60,10 +80,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-05-28T05:27:15.295Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
