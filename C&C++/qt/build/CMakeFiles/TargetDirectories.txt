@@ -1,3 +1,0 @@
-/data/data/com.termux/files/home/InnerCode/Command/C&C++/qt/build/CMakeFiles/qtgame.dir
-/data/data/com.termux/files/home/InnerCode/Command/C&C++/qt/build/CMakeFiles/edit_cache.dir
-/data/data/com.termux/files/home/InnerCode/Command/C&C++/qt/build/CMakeFiles/rebuild_cache.dir

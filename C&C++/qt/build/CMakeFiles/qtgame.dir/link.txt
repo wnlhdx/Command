@@ -1,1 +1,0 @@
-/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/qtgame.dir/main.cpp.o CMakeFiles/qtgame.dir/qtgame.cpp.o -o qtgame  /data/data/com.termux/files/usr/lib/libQt6Widgets.so.6.7.1 /data/data/com.termux/files/usr/lib/libQt6Gui.so.6.7.1 /data/data/com.termux/files/usr/lib/libQt6Core.so.6.7.1 -pthread -lOpenGL::GL
