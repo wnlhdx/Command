@@ -1,47 +1,56 @@
-import pyasl
+from astropy.coordinates import SkyCoord, AltAz, EarthLocation
+from astropy.time import Time
+import astropy.units as u
 
-# 创建一个时间序列
-t = np.linspace(0, 10, 100)  # 从0到10天，分成100个时间点
+# 定义天体的赤道坐标 (RA, Dec)
+ra = 10.684 * u.deg  # 赤经 (RA)
+dec = 41.269 * u.deg  # 赤纬 (Dec)
+sky_coord = SkyCoord(ra=ra, dec=dec, frame='icrs')
 
-# 初始参数
-earth_pos = np.array([0.0, 0.0, 0.0])  # 地球初始位置 (单位：天文单位)
-sun_pos = np.array([0.0, 0.0, 0.0])  # 太阳初始位置 (单位：天文单位)
-moon_pos = np.array([0.0, 0.0, 0.0])  # 月球初始位置 (单位：天文单位)
+# 定义观察者位置（例如北京）
+location = EarthLocation(lat=39.9042 * u.deg, lon=116.4074 * u.deg, height=0 * u.m)
 
-# 使用PyAstronomy库模拟天体运动
-earth_pos = pyasl.KeplerianElements.from_planet_mass_radius(earth_pos, earth_pos)
-sun_pos = pyasl.KeplerianElements.from_planet_mass_radius(sun_pos, sun_pos)
-moon_pos = pyasl.KeplerianElements.from_planet_mass_radius(moon_pos, moon_pos)
+# 定义观察时间
+observation_time = Time('2024-12-20 22:00:00')
 
-# 计算天体在时间t的位置
-for i in range(len(t)):
-    earth_pos = pyasl.KeplerianElements.integrate_orbit(earth_pos, sun_pos, t[i])
-    moon_pos = pyasl.KeplerianElements.integrate_orbit(moon_pos, earth_pos, t[i])
+# 转换为地平坐标
+altaz = AltAz(location=location, obstime=observation_time)
+sky_altaz = sky_coord.transform_to(altaz)
 
-    # 打印天体在时间t的位置
-    print(f"时间: {t[i]:.2f} 天, 地球位置: {earth_pos[0]:.2f}, {earth_pos[1]:.2f}, {earth_pos[2]:.2f} 天文单位, 月球位置: {moon_pos[0]:.2f}, {moon_pos[1]:.2f}, {moon_pos[2]:.2f} 天文单位")
+# 打印地平坐标
+print(f"地平高度 (Altitude): {sky_altaz.alt}")
+print(f"地平方位角 (Azimuth): {sky_altaz.az}")
 
-# 如果需要，可以绘制图表
-import matplotlib.pyplot as plt
 
-plt.figure(figsize=(10, 4))
-plt.subplot(1, 2, 1)
-plt.plot(t, earth_pos[:, 0], 'b-', label='地球位置 (x)')
-plt.plot(t, earth_pos[:, 1], 'g-', label='地球位置 (y)')
-plt.plot(t, earth_pos[:, 2], 'r-', label='地球位置 (z)')
-plt.title('地球位置随时间变化')
-plt.xlabel('时间 (天)')
-plt.ylabel('位置 (天文单位)')
-plt.legend()
+from skyfield.api import load, Topos
 
-plt.subplot(1, 2, 2)
-plt.plot(t, moon_pos[:, 0], 'b-', label='月球位置 (x)')
-plt.plot(t, moon_pos[:, 1], 'g-', label='月球位置 (y)')
-plt.plot(t, moon_pos[:, 2], 'r-', label='月球位置 (z)')
-plt.title('月球位置随时间变化')
-plt.xlabel('时间 (天)')
-plt.ylabel('位置 (天文单位)')
-plt.legend()
+# 加载星历数据
+eph = load('de421.bsp')  # 星历文件
+sun = eph['sun']
 
-plt.tight_layout()
-plt.show()
+# 定义观察者位置（例如北京）
+observer = Topos(latitude_degrees=39.9042, longitude_degrees=116.4074)
+
+# 定义时间范围
+ts = load.timescale()
+start_time = ts.utc(2024, 12, 20)
+end_time = ts.utc(2024, 12, 21)
+
+# 计算太阳的升起和落下时间
+t, events = eph['earth'].at(start_time).observe(sun).apparent().rise_set(observer, start_time, end_time)
+
+# 输出结果
+for ti, event in zip(t, events):
+    event_str = "升起" if event == 0 else "落下"
+    print(f"太阳 {event_str} 时间: {ti.utc_strftime('%Y-%m-%d %H:%M:%S')}")
+
+from astropy.coordinates import SkyCoord
+import astropy.units as u
+
+# 定义两颗天体的赤道坐标 (RA, Dec)
+star1 = SkyCoord(ra=10.684 * u.deg, dec=41.269 * u.deg, frame='icrs')  # 天体1
+star2 = SkyCoord(ra=56.75 * u.deg, dec=24.116 * u.deg, frame='icrs')  # 天体2
+
+# 计算角距离
+angle = star1.separation(star2)
+print(f"两天体之间的角距离: {angle}")
