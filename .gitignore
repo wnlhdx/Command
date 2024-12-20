@@ -52,3 +52,5 @@ C&C++/*/out/
 /C++/gameEngine/build
 /C++/gameEngine/CMakeFiles
 /C++/qt/build
+/kotlin/Activity/.idea
+/kotlin/Vulkan/.idea
