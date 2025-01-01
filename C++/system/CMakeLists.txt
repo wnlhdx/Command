@@ -16,7 +16,7 @@ aux_source_directory(. SRC_CPP_FILES)
 if(CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(ASM_FILE "./testwin.asm")
 elseif(CMAKE_SYSTEM_NAME MATCHES "Linux")
-    set(ASM_FILE "./testlinux.asm")
+    set(ASM_FILE "./start.S")
 endif()
 
 message(STATUS "SRC_CPP_FILES: ${SRC_CPP_FILES}")

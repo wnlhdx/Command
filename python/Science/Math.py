@@ -79,4 +79,78 @@ class MathObj:
         return self
 
 
+# 实数系统：浮动小数
+a = 3.14  # 实数
+
+# 整数系统
+b = 5  # 整数
+
+# 复数
+c = 2 + 3j  # 复数
+
+print(f"Real number: {a}")
+print(f"Integer: {b}")
+print(f"Complex number: {c}")
+
+# 定义群（以加法群为例）
+# 闭合性、结合性、单位元素、逆元素
+G = set(range(-10, 11))  # 整数集
+
+def group_add(a, b):
+    return a + b
+
+# 检查单位元素（0）和逆元素（相反数）
+a = 5
+inverse = -a  # 逆元素
+
+print(f"Group G: {G}")
+print(f"Group addition: {group_add(a, inverse)} = 0 (identity element)")
+
+# 定义环（以整数加法和乘法为例）
+def ring_add(a, b):
+    return a + b
+
+def ring_multiply(a, b):
+    return a * b
+
+# 检查加法和乘法的分配律
+x, y, z = 2, 3, 4
+distributive_property = ring_multiply(x, ring_add(y, z)) == ring_add(ring_multiply(x, y), ring_multiply(x, z))
+
+print(f"Ring addition: {ring_add(x, y)}")
+print(f"Ring multiplication: {ring_multiply(x, y)}")
+print(f"Distributive property: {distributive_property}")
+
+# 定义域（以有理数为例）
+from fractions import Fraction
+
+# 创建有理数集合
+a = Fraction(3, 4)  # 3/4
+b = Fraction(5, 6)  # 5/6
+
+# 加法和乘法
+add_result = a + b
+mul_result = a * b
+div_result = a / b  # 除法（除以非零元素）
+
+print(f"Field addition: {add_result}")
+print(f"Field multiplication: {mul_result}")
+print(f"Field division: {div_result}")
+
+import numpy as np
+
+# 定义向量空间（二维向量空间）
+v1 = np.array([1, 2])
+v2 = np.array([3, 4])
+
+# 向量加法
+vector_add = v1 + v2
+
+# 向量数乘
+scalar_multiply = 2 * v1
+
+print(f"Vector v1: {v1}")
+print(f"Vector v2: {v2}")
+print(f"Vector addition: {vector_add}")
+print(f"Scalar multiplication: {scalar_multiply}")
 
