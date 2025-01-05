@@ -1,5 +1,6 @@
 **/.vs/
 **/.idea/
+**/.venv/
 kotlin/Activity/.idea/
 kotlin/Vulkan/.idea/
 C&C++/*/\.vs/
@@ -31,7 +32,6 @@ C&C++/*/out/
 /C&C++/compiler/out
 /C&C++/database/.vs
 /C&C++/database/out/build
-/C&C++/game/linux/CMakeFiles
 /C&C++/game/out
 /C&C++/gameEngine/.vs
 /C&C++/gameEngine/build
