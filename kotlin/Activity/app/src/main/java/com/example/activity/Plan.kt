@@ -1,22 +1,16 @@
-import retrofit2.http.Body
-import retrofit2.http.DELETE
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
-import retrofit2.Call
-import retrofit2.http.Path
+package com.example.nextjsapp.model
 
+import java.util.Date
 
-// 数据模型
 data class Plan(
     val planName: String,
-    val timeStart: String,
-    val timeEnd: String,
+    val timeStart: Date,
+    val timeEnd: Date,
     val planDetails: String,
     val projectName: String,
     val projectDetails: String,
-    val nightTimeStart: String,
-    val nightTimeEnd: String,
+    val nightTimeStart: Date,
+    val nightTimeEnd: Date,
     val projectFinishPercent: String,
     val dayOfWeek: String,
     val bookName: String,
@@ -29,21 +23,6 @@ data class Plan(
     val typeOfLearn: String,
     val typeDetail: String,
     val standardLearn: String,
-    val updateTime: String,
+    val updateTime: Date,
     val bookPage: String
 )
-
-// Retrofit接口
-interface PlanApi {
-    @GET("plans/all")
-    fun getPlans(): Call<List<Plan>>
-
-    @POST("plans/add")
-    fun addPlan(@Body plan: Plan): Call<Plan>
-
-    @PUT("plans/update")
-    fun updatePlan(@Body plan: Plan): Call<Plan>
-
-    @DELETE("plans/delete/{planName}")
-    fun deletePlan(@Path("planName") planName: String): Call<Void>
-}
