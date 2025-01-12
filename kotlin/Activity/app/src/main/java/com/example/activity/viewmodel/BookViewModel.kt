@@ -1,3 +1,12 @@
+package com.example.activity.viewmodel
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.activity.repository.BookRepository
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+
 class BookViewModel : ViewModel() {
     private val bookRepository = BookRepository()
 

@@ -1,4 +1,4 @@
-package com.example.nextjsapp.model
+package com.example.activity.model
 
 data class Book(
     val picUrl: String,     // 图片 URL

@@ -1,7 +1,7 @@
-package com.example.nextjsapp.repository
+package com.example.activity.repository
 
-import com.example.nextjsapp.model.Plan
-import com.example.nextjsapp.network.RetrofitClient
+import com.example.activity.model.Plan
+import com.example.activity.network.RetrofitClient
 
 class PlanRepository {
     private val api = RetrofitClient.apiService

@@ -1,3 +1,16 @@
+package  com.example.activity;
+
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.example.activity.viewmodel.BookViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.rememberAsyncImagePainter
+
+
 @Composable
 fun BookReadingScreen(viewModel: BookViewModel = viewModel()) {
     val bookPic by viewModel.bookPic.collectAsState(initial = "")
@@ -7,7 +20,7 @@ fun BookReadingScreen(viewModel: BookViewModel = viewModel()) {
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         // 显示当前页的英文原文图片
         Image(
-            painter = rememberImagePainter(data = bookPic),
+            painter = rememberAsyncImagePainter(model = bookPic),
             contentDescription = "书籍图片",
             modifier = Modifier
                 .fillMaxWidth()
@@ -20,7 +33,7 @@ fun BookReadingScreen(viewModel: BookViewModel = viewModel()) {
         Text(
             text = bookTranslation,
             modifier = Modifier.fillMaxWidth(),
-            style = MaterialTheme.typography.body1
+            style = MaterialTheme.typography.bodyLarge
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -37,7 +50,7 @@ fun BookReadingScreen(viewModel: BookViewModel = viewModel()) {
                 Text("上一页")
             }
 
-            Text("当前页: $currentPage", style = MaterialTheme.typography.body1)
+            Text("当前页: $currentPage", style = MaterialTheme.typography.bodyLarge)
 
             Button(
                 onClick = { viewModel.nextPage() }

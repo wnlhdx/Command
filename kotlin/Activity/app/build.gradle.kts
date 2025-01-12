@@ -71,6 +71,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okhttp)
-
-
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.icons.extended)
 }

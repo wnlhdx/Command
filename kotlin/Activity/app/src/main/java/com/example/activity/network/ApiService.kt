@@ -1,23 +1,22 @@
-package com.example.nextjsapp.network
+package com.example.activity.network
 
-import com.example.nextjsapp.model.Book
-import com.example.nextjsapp.model.Plan
+import com.example.activity.model.Plan
 import retrofit2.http.*
 
 interface ApiService {
 
     // Plan 相关接口
-    @GET("/plans")
+    @GET("/plans/all")
     suspend fun getAllPlans(): List<Plan>
 
-    @POST("/plans")
+    @POST("/plans/add")
     suspend fun createPlan(@Body plan: Plan): Plan
 
-    @PUT("/plans/{id}")
-    suspend fun updatePlan(@Path("id") id: String, @Body plan: Plan): Plan
+    @PUT("/plans/{planName}")
+    suspend fun updatePlan(@Path("planName") id: String, @Body plan: Plan): Plan
 
-    @DELETE("/plans/{id}")
-    suspend fun deletePlan(@Path("id") id: String)
+    @DELETE("/del/{planName}")
+    suspend fun deletePlan(@Path("planName") id: String)
 
     // Book 相关接口
     @GET("/book/pic")
