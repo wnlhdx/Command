@@ -1,135 +1,120 @@
 import asyncio
 import os
-import subprocess
-import time
-import importlib
-from openai import OpenAI
+import sys
+import io
+from typing import Optional
+from openai import AsyncOpenAI  # 使用异步客户端
+import sounddevice as sd  # 跨平台音频播放
+import numpy as np
+from pydub import AudioSegment
 import edge_tts
 
-# 假设这是您的正确OpenAI API密钥和基础URL
-client = OpenAI(
-    api_key="sk-VjSCWObgSc3EbfaJQRACXMvb33Q7th40lxF9d7Sk9aJoydQ8",  # 替换为您的OpenAI API密钥
-    base_url="https://api.chatanywhere.tech/v1"  # 替换为OpenAI官方基础URL
+# 安全配置管理（使用python-dotenv）
+from dotenv import load_dotenv
+load_dotenv()
+
+# 初始化异步客户端
+client = AsyncOpenAI(
+    api_key=os.getenv("sk-VjSCWObgSc3EbfaJQRACXMvb33Q7th40lxF9d7Sk9aJoydQ8"),
+    base_url=os.getenv("https://api.chatanywhere.tech/v1")
 )
 
-# 用于保存对话记录的列表
-conversation_log = []
+class VoiceEngine:
+    """跨平台语音引擎（内存流处理）"""
+    @staticmethod
+    async def text_to_speech(text: str):
+        communicate = edge_tts.Communicate(text, 'zh-CN-XiaoxiaoNeural')
+        audio_stream = bytearray()
+        async for chunk in communicate.stream():
+            if chunk["type"] == "audio":
+                audio_stream.extend(chunk["data"])
+        return audio_stream
 
+    @staticmethod
+    def play_audio(audio_data: bytes):
+        """使用sounddevice播放音频"""
+        audio = AudioSegment.from_file(io.BytesIO(audio_data), format="mp3")
+        samples = np.array(audio.get_array_of_samples())
+        sd.play(samples, audio.frame_rate)
+        sd.wait()
 
-def gpt_35_api_stream(input_message):
-    """调用 GPT-3.5 Turbo API，返回生成的消息内容"""
-    completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system",
-             "content": "You are a personal assistant, skilled in all things about a person who wants to know. "
-                        "And I will use you to help me complete all my work."},
-            {"role": "user", "content": input_message}
-        ]
-    )
-    messages = completion.choices[0].message.content
-    print(messages)
-    return messages
+class ConversationManager:
+    """对话管理系统"""
+    def __init__(self):
+        self.history = []
+        self.max_history = 20  # 保持最近20条记录
 
+    def add_message(self, role: str, content: str):
+        self.history.append({"role": role, "content": content})
+        if len(self.history) > self.max_history:
+            self.history.pop(0)
 
-async def amain(read_message: str) -> None:
-    """通过 edge_tts 将文本转换为语音并保存为 MP3 文件"""
-    communicate = edge_tts.Communicate(read_message, 'zh-CN-XiaoxiaoNeural')
-    await communicate.save('test.mp3')
+    def get_context(self):
+        return [{"role": "system", "content": "你是精通时间管理和跨平台操作的智能助理"}] + self.history
 
+class TaskScheduler:
+    """后台任务调度器"""
+    def __init__(self):
+        self.active_tasks = set()
 
-def save(read_message: str):
-    """封装 amain 方法，保存语音文件"""
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    try:
-        loop.run_until_complete(amain(read_message))
-    finally:
-        loop.close()
+    async def create_task(self, coroutine):
+        """创建并跟踪异步任务"""
+        task = asyncio.create_task(coroutine)
+        self.active_tasks.add(task)
+        task.add_done_callback(lambda t: self.active_tasks.remove(t))
+        return task
 
+async def main_loop():
+    # 初始化核心组件
+    voice = VoiceEngine()
+    conv_mgr = ConversationManager()
+    scheduler = TaskScheduler()
 
-def read(read_message: str):
-    """保存并播放语音"""
-    save(read_message)
-    if os.name == 'posix':
-        # Unix-like 系统，例如 Termux
-        read_termux()
-    elif os.name == 'nt':
-        # Windows 系统
-        read_windows()
+    # 启动初始化问候
+    init_msg = "跨平台智能助理已就绪"
+    print(init_msg)
+    audio_data = await voice.text_to_speech(init_msg)
+    voice.play_audio(audio_data)
 
-
-def read_termux():
-    """通过 mpv 播放音频文件（适用于 Unix-like 系统）"""
-    subprocess.call('mpv test.mp3', shell=True)
-
-
-def read_windows():
-    """通过 pygame 播放音频文件（适用于 Windows 系统）"""
-    try:
-        # 动态导入 pygame，避免未安装时报错
-        module = importlib.import_module("pygame")
-        module.mixer.init()
-        size = 0.7
-        module.mixer.music.set_volume(size)
-        module.mixer.music.load("test.mp3")
-        module.mixer.music.play()
-        # 等待播放完成
-        while module.mixer.music.get_busy():
-            time.sleep(0.1)
-        # 确保文件不再被播放器占用
-        module.mixer.music.unload()
-    except ModuleNotFoundError:
-        print("请安装 pygame 模块以支持语音播放：pip install pygame")
-        sys.exit(1)
-
-
-def save_conversation(user_message, ai_reply):
-    """将用户输入和 AI 回复保存到列表中"""
-    conversation_log.append({"用户": user_message, "AI": ai_reply})
-
-
-def view_conversation():
-    """查看对话记录"""
-    if conversation_log:
-        print("\n当前对话记录：")
-        for index, entry in enumerate(conversation_log, 1):
-            print(f"记录 {index}:")
-            print(f"用户: {entry['用户']}")
-            print(f"AI: {entry['AI']}")
-            print("=" * 50)
-    else:
-        print("暂无对话记录。")
-
-
-def delete_conversation():
-    """清空对话记录列表"""
-    conversation_log.clear()
-    print("对话记录已清空。")
-
-
-if __name__ == '__main__':
-    # 初始化提示语
-    initial_message = "初始化中，请问我能做些什么？"
-    print(initial_message)
-    read(initial_message)
     while True:
-        # 获取用户输入
-        user_message = input("用户: ")
-        if user_message.lower() == "退出":
+        # 异步获取用户输入
+        user_input = await asyncio.get_event_loop().run_in_executor(
+            None, input, "您: "
+        )
+
+        if user_input.lower() in ["退出", "exit"]:
             break
-        elif user_message.lower() == "查看记录":
-            view_conversation()
+
+        # 处理特殊命令
+        if user_input == "查看记录":
+            print(f"\n当前记录：{conv_mgr.history}")
             continue
-        elif user_message.lower() == "清空记录":
-            delete_conversation()
-            continue
 
-        # 调用 GPT-3.5 API 获取回复
-        ai_reply = gpt_35_api_stream(user_message)
+        # 添加用户消息到上下文
+        conv_mgr.add_message("user", user_input)
 
-        # 保存对话记录到列表
-        save_conversation(user_message, ai_reply)
+        # 异步调用GPT
+        response = await client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=conv_mgr.get_context(),
+            stream=True
+        )
 
-        # 播放 GPT 的回复语音
-        read(ai_reply)
+        # 流式处理回复
+        full_reply = []
+        async for chunk in response:
+            content = chunk.choices[0].delta.content
+            if content:
+                print(content, end="", flush=True)
+                full_reply.append(content)
+
+        # 添加AI回复到上下文
+        conv_mgr.add_message("assistant", "".join(full_reply))
+
+        # 异步播放语音（不阻塞主循环）
+        await scheduler.create_task(
+            voice.text_to_speech("".join(full_reply))
+        )
+
+if __name__ == "__main__":
+    asyncio.run(main_loop())
