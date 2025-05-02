@@ -37,11 +37,11 @@ android {
             signingConfig signingConfigs.release
         }
         signingConfigs {
-            release {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
+            create("release") {
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
             }
         }
     }
