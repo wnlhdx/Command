@@ -1,21 +1,27 @@
-﻿# CMakeList.txt: demo2 的 CMake 项目，在此处包括源代码并定义
-# 项目特定的逻辑。
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.8)
+project(compiler C)
 
-# Enable Hot Reload for MSVC compilers if supported.
-if (POLICY CMP0141)
-  cmake_policy(SET CMP0141 NEW)
-  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
-endif()
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
 
-project ("compiler")
+find_package(BISON REQUIRED)
+find_package(FLEX REQUIRED)
 
-# 将源代码添加到此项目的可执行文件。
-add_executable (compiler "compiler.cpp" "sytanx_an.tab.h" "sytanx_an.tab.c" "lex.yy.c"")
+# 指定 bison 目标
+BISON_TARGET(Parser parser.y ${CMAKE_CURRENT_BINARY_DIR}/parser.tab.c
+             DEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/parser.tab.h)
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET compiler PROPERTY CXX_STANDARD 20)
-endif()
+# 指定 flex 目标
+FLEX_TARGET(Lexer lexer.l ${CMAKE_CURRENT_BINARY_DIR}/lexer.yy.c)
 
-# TODO: 如有需要，请添加测试并安装目标。
+# 解决 bison/flex 依赖关系
+ADD_FLEX_BISON_DEPENDENCY(Lexer Parser)
+
+# 构建最终编译器程序
+add_executable(compiler
+    ${BISON_Parser_OUTPUTS}
+    ${FLEX_Lexer_OUTPUTS}
+)
+
+# 让 flex 能 include parser.tab.h
+target_include_directories(compiler PRIVATE ${CMAKE_CURRENT_BINARY_DIR})

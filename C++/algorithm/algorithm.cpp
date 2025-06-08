@@ -1,110 +1,64 @@
 ﻿#include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
 #include <chrono>
 
-// 插入排序
-void insertionSort(std::vector<int>& arr) {
-    int n = arr.size();
-    for (int i = 1; i < n; i++) {
-        int key = arr[i];
-        int j = i - 1;
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j--;
+// 线性搜索
+int linearSearch(const std::vector<int>& arr, int target) {
+    for (size_t i = 0; i < arr.size(); ++i) {
+        if (arr[i] == target) {
+            return static_cast<int>(i);
         }
-        arr[j + 1] = key;
     }
+    return -1;
 }
 
-// 归并排序的合并函数
-void merge(std::vector<int>& arr, int l, int m, int r) {
-    int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
-    std::vector<int> L(n1), R(n2);
-
-    for (i = 0; i < n1; i++)
-        L[i] = arr[l + i];
-    for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1 + j];
-
-    i = 0;
-    j = 0;
-    k = l;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
-            i++;
-        }
-        else {
-            arr[k] = R[j];
-            j++;
-        }
-        k++;
+// 二分查找（有序数组）
+int binarySearch(const std::vector<int>& arr, int target) {
+    int left = 0, right = static_cast<int>(arr.size()) - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
     }
-
-    while (i < n1) {
-        arr[k] = L[i];
-        i++;
-        k++;
-    }
-
-    while (j < n2) {
-        arr[k] = R[j];
-        j++;
-        k++;
-    }
-}
-
-// 归并排序
-void mergeSort(std::vector<int>& arr, int l, int r) {
-    if (l < r) {
-        int m = l + (r - l) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-        merge(arr, l, m, r);
-    }
-}
-
-// 打印数组
-void printArray(const std::vector<int>& arr) {
-    for (int num : arr) {
-        std::cout << num << " ";
-    }
-    std::cout << "\n";
+    return -1;
 }
 
 int main() {
-    const int SIZE = 10000; // 数组大小
-    std::vector<int> arr(SIZE);
-
-    // 初始化随机数发生器
-    srand(time(NULL));
-    for (int i = 0; i < SIZE; i++) {
-        arr[i] = rand() % SIZE; // 随机数
+    // 构造有序数据
+    std::vector<int> data;
+    for (int i = 0; i < 1000000; ++i) {
+        data.push_back(i * 2);  // 偶数序列，有序
     }
 
-    // 复制数组用于插入排序
-    std::vector<int> arrInsertion = arr;
+    int target = 1999998;  // 目标值
 
-    // 测量插入排序时间
-    auto start = std::chrono::high_resolution_clock::now();
-    insertionSort(arrInsertion);
-    auto end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> insertionTime = end - start;
-    std::cout << "Insertion Sort took " << insertionTime.count() << " milliseconds.\n";
+    // 线性搜索计时
+    auto start_linear = std::chrono::high_resolution_clock::now();
+    int index_linear = linearSearch(data, target);
+    auto end_linear = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed_linear = end_linear - start_linear;
 
-    // 复制数组用于归并排序
-    std::vector<int> arrMerge = arr;
+    // 二分查找计时
+    auto start_binary = std::chrono::high_resolution_clock::now();
+    int index_binary = binarySearch(data, target);
+    auto end_binary = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed_binary = end_binary - start_binary;
 
-    // 测量归并排序时间
-    start = std::chrono::high_resolution_clock::now();
-    mergeSort(arrMerge, 0, SIZE - 1);
-    end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> mergeTime = end - start;
-    std::cout << "Merge Sort took " << mergeTime.count() << " milliseconds.\n";
+    // 输出结果和时间
+    if (index_linear != -1) {
+        std::cout << "[线性搜索] 找到目标 " << target << "，索引为 " << index_linear << "\n";
+    } else {
+        std::cout << "[线性搜索] 未找到目标 " << target << "\n";
+    }
+    std::cout << "线性搜索耗时: " << elapsed_linear.count() << " 秒\n";
+
+    if (index_binary != -1) {
+        std::cout << "[二分查找] 找到目标 " << target << "，索引为 " << index_binary << "\n";
+    } else {
+        std::cout << "[二分查找] 未找到目标 " << target << "\n";
+    }
+    std::cout << "二分查找耗时: " << elapsed_binary.count() << " 秒\n";
 
     return 0;
 }

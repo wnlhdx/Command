@@ -1,56 +1,41 @@
-from astropy.coordinates import SkyCoord, AltAz, EarthLocation
-from astropy.time import Time
-import astropy.units as u
+def is_leap_year(year):
+    """
+    判断是否闰年（格里历规则）
+    规则：
+    - 能被4整除且不能被100整除的是闰年
+    - 能被400整除的是闰年
+    """
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
 
-# 定义天体的赤道坐标 (RA, Dec)
-ra = 10.684 * u.deg  # 赤经 (RA)
-dec = 41.269 * u.deg  # 赤纬 (Dec)
-sky_coord = SkyCoord(ra=ra, dec=dec, frame='icrs')
+def day_of_year(year, month, day):
+    """
+    计算格里历日期是该年的第几天
+    """
+    # 每月天数
+    month_days = [31, 28 + is_leap_year(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    return sum(month_days[:month-1]) + day
 
-# 定义观察者位置（例如北京）
-location = EarthLocation(lat=39.9042 * u.deg, lon=116.4074 * u.deg, height=0 * u.m)
+def gregorian_to_julian_day(year, month, day):
+    """
+    计算格里历日期对应的儒略日数（JD），整数部分
+    这里使用经典算法（Fliegel-Van Flandern算法）
+    """
+    if month <= 2:
+        year -= 1
+        month += 12
+    A = year // 100
+    B = 2 - A + (A // 4)
+    JD = int(365.25*(year + 4716)) + int(30.6001*(month + 1)) + day + B - 1524
+    return JD
 
-# 定义观察时间
-observation_time = Time('2024-12-20 22:00:00')
+def example():
+    y, m, d = 2024, 6, 7
+    print(f"判断年份 {y} 是否闰年：{is_leap_year(y)}")
+    doy = day_of_year(y, m, d)
+    print(f"{y}-{m}-{d} 是该年的第 {doy} 天")
 
-# 转换为地平坐标
-altaz = AltAz(location=location, obstime=observation_time)
-sky_altaz = sky_coord.transform_to(altaz)
+    jd = gregorian_to_julian_day(y, m, d)
+    print(f"格里历日期 {y}-{m}-{d} 对应的儒略日整数部分是：{jd}")
 
-# 打印地平坐标
-print(f"地平高度 (Altitude): {sky_altaz.alt}")
-print(f"地平方位角 (Azimuth): {sky_altaz.az}")
-
-
-from skyfield.api import load, Topos
-
-# 加载星历数据
-eph = load('de421.bsp')  # 星历文件
-sun = eph['sun']
-
-# 定义观察者位置（例如北京）
-observer = Topos(latitude_degrees=39.9042, longitude_degrees=116.4074)
-
-# 定义时间范围
-ts = load.timescale()
-start_time = ts.utc(2024, 12, 20)
-end_time = ts.utc(2024, 12, 21)
-
-# 计算太阳的升起和落下时间
-t, events = eph['earth'].at(start_time).observe(sun).apparent().rise_set(observer, start_time, end_time)
-
-# 输出结果
-for ti, event in zip(t, events):
-    event_str = "升起" if event == 0 else "落下"
-    print(f"太阳 {event_str} 时间: {ti.utc_strftime('%Y-%m-%d %H:%M:%S')}")
-
-from astropy.coordinates import SkyCoord
-import astropy.units as u
-
-# 定义两颗天体的赤道坐标 (RA, Dec)
-star1 = SkyCoord(ra=10.684 * u.deg, dec=41.269 * u.deg, frame='icrs')  # 天体1
-star2 = SkyCoord(ra=56.75 * u.deg, dec=24.116 * u.deg, frame='icrs')  # 天体2
-
-# 计算角距离
-angle = star1.separation(star2)
-print(f"两天体之间的角距离: {angle}")
+if __name__ == "__main__":
+    example()

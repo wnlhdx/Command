@@ -60,3 +60,8 @@ C&C++/*/out/
 /kotlin/Vulkan/.idea
 /kotlin/Activity/.kotlin/errors
 /python/dataan/kaggle/
+/flutter/my_app/.dart_tool
+/flutter/my_app/android/.gradle
+/flutter/my_app/build
+/flutter/my_app/windows
+/flutter/my_app/android/gradle/wrapper

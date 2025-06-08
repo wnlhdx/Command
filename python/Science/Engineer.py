@@ -1,65 +1,74 @@
-import numpy as np
-from scipy.constants import g
-from sympy import symbols, Eq, solve
-import pint
+import math
 
 
-# 定义木块的尺寸
-L, W, H = 1, 1, 1  # 假设木块的尺寸为1米
+class ForceVector:
+    def __init__(self, x: float, y: float):
+        self.x = x
+        self.y = y
 
-# 定义外力
-F = 1000  # 垂直于底面的力，单位：牛顿
-P = 500   # 水平力，单位：牛顿
-Q = 200   # 垂直于侧面的力，单位：牛顿
+    def magnitude(self):
+        return math.hypot(self.x, self.y)
 
-# 木块的质量，假设为1千克
-m = 1
+    def direction_deg(self):
+        return math.degrees(math.atan2(self.y, self.x))
 
-# 重力加速度，单位：米/秒^2
-g = 9.81
+    def __add__(self, other):
+        return ForceVector(self.x + other.x, self.y + other.y)
 
-# 计算重力
-G = m * g
+    def dot(self, other):
+        return self.x * other.x + self.y * other.y
 
-# 定义力的矢量
-F_vector = np.array([0, 0, F])  # 垂直力
-P_vector = np.array([P, 0, 0])  # 水平力
-Q_vector = np.array([0, 0, Q])  # 垂直力
+    def angle_with(self, other):
+        """返回夹角，单位为度"""
+        mag1 = self.magnitude()
+        mag2 = other.magnitude()
+        if mag1 == 0 or mag2 == 0:
+            raise ValueError("不能对零向量求夹角")
+        cos_theta = self.dot(other) / (mag1 * mag2)
+        # 防止浮点误差越界
+        cos_theta = max(-1.0, min(1.0, cos_theta))
+        angle_rad = math.acos(cos_theta)
+        return math.degrees(angle_rad)
 
-# 计算质心位置
-center_of_mass = np.array([L / 2, W / 2, H / 2])
+    def __repr__(self):
+        return f"ForceVector(x={self.x:.2f}, y={self.y:.2f})"
 
-# 计算每个力对质心的力矩
-moment_F = np.cross(F_vector, center_of_mass)
-moment_P = np.cross(P_vector, center_of_mass)
-moment_Q = np.cross(Q_vector, center_of_mass)
 
-# 计算总力矩
-total_moment = moment_F + moment_P + moment_Q
+class ForceSystem:
+    def __init__(self):
+        self.forces = []
 
-# 检查总力矩是否为零，如果为零，则木块处于静止状态
-if np.linalg.norm(total_moment) == 0:
-    print("木块处于静止状态。")
-else:
-    print("木块不处于静止状态。")
+    def add_force(self, force: ForceVector):
+        self.forces.append(force)
 
-# 定义符号变量
-x, y, Fx, Fy = symbols('x y Fx Fy')
+    def net_force(self):
+        total_x = sum(f.x for f in self.forces)
+        total_y = sum(f.y for f in self.forces)
+        return ForceVector(total_x, total_y)
 
-# 定义力的矢量
-force_vector = [Fx, Fy]
+    def is_equilibrium(self, tolerance=1e-6):
+        net = self.net_force()
+        return abs(net.x) < tolerance and abs(net.y) < tolerance
 
-# 假设木块的质心位于其几何中心
-center_of_mass = [L / 2, W / 2]
 
-# 计算每个力对质心的力矩
-moment_F = np.cross(force_vector, center_of_mass)
 
-# 检查总力矩是否为零，如果为零，则木块处于静止状态
-total_moment = moment_F.dot(center_of_mass)
-equation = Eq(total_moment, 0)
 
-# 求解方程
-solution = solve(equation, Fx)
+# 三个力矢量（均为笛卡尔坐标）
+f1 = ForceVector(5, 0)       # 向右
+f2 = ForceVector(-3, 2.598)  # 向左上（60°）
+f3 = ForceVector(-2, -2.598) # 向左下（-60°）
 
-print(f"水平力 Fx 的值：{solution[0]}")
+fs = ForceSystem()
+fs.add_force(f1)
+fs.add_force(f2)
+fs.add_force(f3)
+
+net = fs.net_force()
+print("合力为：", net)
+print("系统是否平衡：", fs.is_equilibrium())
+
+f1 = ForceVector(1, 0)    # x 轴正方向
+f2 = ForceVector(0, 1)    # y 轴正方向
+
+angle = f1.angle_with(f2)
+print(f"f1 与 f2 的夹角为：{angle:.2f}°")  # 输出：90.00°
