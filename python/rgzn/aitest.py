@@ -1,26 +1,15 @@
 import asyncio
-import os
-import sys
 import io
-from typing import Optional
-from openai import AsyncOpenAI  # 使用异步客户端
-import sounddevice as sd  # 跨平台音频播放
 import numpy as np
+import sounddevice as sd
 from pydub import AudioSegment
 import edge_tts
+from g4f.client import Client  # ✅ 新接口
 
-# 安全配置管理（使用python-dotenv）
-from dotenv import load_dotenv
-load_dotenv()
-
-# 初始化异步客户端
-client = AsyncOpenAI(
-    api_key="sk-VjSCWObgSc3EbfaJQRACXMvb33Q7th40lxF9d7Sk9aJoydQ8",
-    base_url="https://api.chatanywhere.tech/"
-)
-
+# -------------------------
+# 语音模块
+# -------------------------
 class VoiceEngine:
-    """跨平台语音引擎（内存流处理）"""
     @staticmethod
     async def text_to_speech(text: str):
         communicate = edge_tts.Communicate(text, 'zh-CN-XiaoxiaoNeural')
@@ -32,19 +21,20 @@ class VoiceEngine:
 
     @staticmethod
     def play_audio(audio_data: bytes):
-        """使用sounddevice播放音频"""
         audio = AudioSegment.from_file(io.BytesIO(audio_data), format="mp3")
         samples = np.array(audio.get_array_of_samples())
         sd.play(samples, audio.frame_rate)
         sd.wait()
 
+# -------------------------
+# 对话管理
+# -------------------------
 class ConversationManager:
-    """对话管理系统"""
     def __init__(self):
         self.history = []
-        self.max_history = 20  # 保持最近20条记录
+        self.max_history = 20
 
-    def add_message(self, role: str, content: str):
+    def add_message(self, role, content):
         self.history.append({"role": role, "content": content})
         if len(self.history) > self.max_history:
             self.history.pop(0)
@@ -52,69 +42,59 @@ class ConversationManager:
     def get_context(self):
         return [{"role": "system", "content": "你是精通时间管理和跨平台操作的智能助理"}] + self.history
 
+# -------------------------
+# 任务调度
+# -------------------------
 class TaskScheduler:
-    """后台任务调度器"""
     def __init__(self):
         self.active_tasks = set()
 
     async def create_task(self, coroutine):
-        """创建并跟踪异步任务"""
         task = asyncio.create_task(coroutine)
         self.active_tasks.add(task)
         task.add_done_callback(lambda t: self.active_tasks.remove(t))
         return task
 
+# -------------------------
+# 主逻辑（仅使用默认 provider）
+# -------------------------
 async def main_loop():
-    # 初始化核心组件
     voice = VoiceEngine()
     conv_mgr = ConversationManager()
     scheduler = TaskScheduler()
 
-    # 启动初始化问候
-    init_msg = "跨平台智能助理已就绪"
-    print(init_msg)
-    audio_data = await voice.text_to_speech(init_msg)
+    print("跨平台智能助理已就绪")
+    audio_data = await voice.text_to_speech("跨平台智能助理已就绪")
     voice.play_audio(audio_data)
 
-    while True:
-        # 异步获取用户输入
-        user_input = await asyncio.get_event_loop().run_in_executor(
-            None, input, "您: "
-        )
+    client = Client()  # 默认 provider
 
+    while True:
+        user_input = await asyncio.get_event_loop().run_in_executor(None, input, "您: ")
         if user_input.lower() in ["退出", "exit"]:
             break
-
-        # 处理特殊命令
         if user_input == "查看记录":
             print(f"\n当前记录：{conv_mgr.history}")
             continue
 
-        # 添加用户消息到上下文
         conv_mgr.add_message("user", user_input)
+        messages = conv_mgr.get_context()
 
-        # 异步调用GPT
-        response = await client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=conv_mgr.get_context(),
-            stream=True
-        )
+        try:
+            res = client.chat.completions.create(
+                model="gpt-4o-mini",  # 可换为 gpt-5-mini 等
+                messages=messages
+            )
+            reply = res.choices[0].message.content
+        except Exception as e:
+            reply = f"请求出错: {e}"
 
-        # 流式处理回复
-        full_reply = []
-        async for chunk in response:
-            content = chunk.choices[0].delta.content
-            if content:
-                print(content, end="", flush=True)
-                full_reply.append(content)
+        print("AI:", reply)
+        conv_mgr.add_message("assistant", reply)
 
-        # 添加AI回复到上下文
-        conv_mgr.add_message("assistant", "".join(full_reply))
-
-        # 异步播放语音（不阻塞主循环）
-        await scheduler.create_task(
-            voice.text_to_speech("".join(full_reply))
-        )
+        # 异步播放语音
+        audio_data = await voice.text_to_speech(reply)
+        await scheduler.create_task(voice.play_audio(audio_data))
 
 if __name__ == "__main__":
     asyncio.run(main_loop())
