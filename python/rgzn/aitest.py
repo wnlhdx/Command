@@ -15,8 +15,8 @@ load_dotenv()
 
 # 初始化异步客户端
 client = AsyncOpenAI(
-    api_key=os.getenv("sk-VjSCWObgSc3EbfaJQRACXMvb33Q7th40lxF9d7Sk9aJoydQ8"),
-    base_url=os.getenv("https://api.chatanywhere.tech/v1")
+    api_key="sk-VjSCWObgSc3EbfaJQRACXMvb33Q7th40lxF9d7Sk9aJoydQ8",
+    base_url="https://api.chatanywhere.tech/"
 )
 
 class VoiceEngine:
