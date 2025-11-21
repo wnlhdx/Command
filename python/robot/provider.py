@@ -1,27 +1,43 @@
-import asyncio, random
+import asyncio
+import random
+import time
 
-async def simulate_call(name: str) -> str:
-    await asyncio.sleep(random.uniform(0.1, 0.5))  # 模拟网络延迟
-    if random.random() < 0.2:
-        raise Exception(f"{name} 失败")
-    return f"{name} 回复"
 
-async def main():
-    # 创建多个协程任务，不 await 立即执行
-    tasks = [
-        asyncio.create_task(simulate_call("provider1")),
-        asyncio.create_task(simulate_call("provider2")),
-        asyncio.create_task(simulate_call("provider3")),
-    ]
+async def call_provider(name: str) -> str:
+    print(f"[{time.time():.2f}] {name} start")
+    await asyncio.sleep(random.uniform(1, 10))
+    print(f"[{time.time():.2f}] {name} end")
+    if random.random() < 0.5:
+        raise Exception(f"{name} Connect False")
+    return f"{name} Connected"
 
-    # 等待所有任务完成
-    results = await asyncio.gather(*tasks, return_exceptions=True)
-    
-    for r in results:
-        if isinstance(r, Exception):
-            print("出错:", r)
-        else:
-            print(r)
 
-if __name__ == "__main__":
-    asyncio.run(main())
+class ProviderManager:
+    def __init__(self, providers, timeout=8):
+        self.providers = providers
+        self.timeout = timeout
+
+    async def wait_success(self):
+        tasks = []
+        loop = asyncio.get_running_loop()
+        for p in self.providers:
+            coro = call_provider(p)
+            t = loop.create_task(asyncio.wait_for(coro, timeout=self.timeout))
+            tasks.append(t)
+
+        try:
+            for completed in asyncio.as_completed(tasks):
+                try:
+                    res = await  completed
+                    for t in tasks:
+                        if not t.done():
+                            t.cancel()
+                    return res
+                except TimeoutError:
+                    # this provider errored/timeout -> try next completed
+                    continue
+            raise Exception("no accessible provider")
+        finally:
+            for t in tasks:
+                if not t.done():
+                    t.cancel()
